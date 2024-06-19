@@ -2,11 +2,10 @@
 
 namespace Flutterping;
 
-use Flutterping\Resources\Action\Action;
 use Flutterping\Resources\Action\AlertAction;
 use Flutterping\Resources\Event\ActionEvent;
+use Flutterping\Resources\Renderable;
 use Flutterping\Resources\UI\Color;
-use Flutterping\Resources\Widgets\StatefulWidget;
 use Flutterping\Resources\Widgets\Text;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -45,12 +44,14 @@ class FlutterpingServiceProvider extends PackageServiceProvider
             };
             return Response::json((new ActionEvent())->setAction((new AlertAction())->setContent((new Text($alertMessage)))->setColor($color))->toArray());
         });
+
+        Response::macro('flutterping', function (Renderable $renderable) {
+            return Response::json($renderable->render());
+        });
     }
 
     protected function registerRequestMacro(): void
     {
-        Request::macro('flutterping', function () {
-            return (bool) $this->header('X-FlutterPing');
-        });
+        // TODO: set up request macro
     }
 }
