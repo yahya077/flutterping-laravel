@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Flutterping\FlutterpingLaravel\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FlutterpingLaravelCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'flutterping-laravel';
 
     public $description = 'My command';
 
