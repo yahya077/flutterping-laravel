@@ -13,12 +13,14 @@ class StatelessWidget extends Widget
     public function setStateId(string $stateId): self
     {
         $this->stateId = $stateId;
+
         return $this;
     }
 
     public function setChild(Widget $child): self
     {
         $this->child = $child;
+
         return $this;
     }
 

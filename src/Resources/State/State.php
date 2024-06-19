@@ -2,7 +2,4 @@
 
 namespace Flutterping\Resources\State;
 
-abstract class State
-{
-
-}
+abstract class State {}

@@ -2,7 +2,4 @@
 
 namespace Flutterping\Resources\Page;
 
-interface PageInterface
-{
-
-}
+interface PageInterface {}

@@ -7,8 +7,11 @@ use Flutterping\Resources\Renderable;
 class TextCapitalization extends Renderable
 {
     const none = 'none';
+
     const words = 'words';
+
     const sentences = 'sentences';
+
     const characters = 'characters';
 
     public const values = [
@@ -21,27 +24,27 @@ class TextCapitalization extends Renderable
     public function __construct(
         protected string $value
     ) {
-        if (!in_array($this->value, self::values)) {
+        if (! in_array($this->value, self::values)) {
             throw new \InvalidArgumentException('Invalid value for TextCapitalization');
         }
     }
 
-    static public function none(): TextCapitalization
+    public static function none(): TextCapitalization
     {
         return new static(self::none);
     }
 
-    static public function words(): TextCapitalization
+    public static function words(): TextCapitalization
     {
         return new static(self::words);
     }
 
-    static public function sentences(): TextCapitalization
+    public static function sentences(): TextCapitalization
     {
         return new static(self::sentences);
     }
 
-    static public function characters(): TextCapitalization
+    public static function characters(): TextCapitalization
     {
         return new static(self::characters);
     }

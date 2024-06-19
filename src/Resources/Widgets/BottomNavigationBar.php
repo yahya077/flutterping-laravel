@@ -3,34 +3,46 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\AbstractBottomNavigationBar;
-use Flutterping\Resources\Action\NavigationAction;
-use Flutterping\Resources\Contracts\BottomNavigationBarInterface;
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Event\BaseEvent;
-use Flutterping\Resources\Event\Event;
-use Flutterping\Resources\Navigation\NavigationPath;
 use Flutterping\Resources\Paintings\TextStyle;
 use Flutterping\Resources\Value;
 
 class BottomNavigationBar extends AbstractBottomNavigationBar
 {
     protected array|BottomNavigationBarItem $items;
+
     protected Value $currentIndex;
+
     protected string $stackKey;
+
     protected array|BaseEvent $onTapEvents;
+
     protected ?float $elevation;
+
     protected ?ColorInterface $backgroundColor;
+
     protected ?int $iconSize;
+
     protected ?ColorInterface $selectedItemColor;
+
     protected ?ColorInterface $unselectedItemColor;
+
     protected ?IconThemeData $selectedIconTheme;
+
     protected ?IconThemeData $unselectedIconTheme;
+
     protected ?int $selectedFontSize;
+
     protected ?int $unselectedFontSize;
+
     protected ?TextStyle $selectedLabelStyle;
+
     protected ?TextStyle $unselectedLabelStyle;
+
     protected ?bool $showSelectedLabels;
+
     protected ?bool $showUnselectedLabels;
 
     public function setItems(array|BottomNavigationBarItem $items): self
@@ -68,7 +80,7 @@ class BottomNavigationBar extends AbstractBottomNavigationBar
         return $this;
     }
 
-public function setSelectedItemColor(ColorInterface $selectedItemColor): self
+    public function setSelectedItemColor(ColorInterface $selectedItemColor): self
     {
         $this->selectedItemColor = $selectedItemColor;
 

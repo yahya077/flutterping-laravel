@@ -4,7 +4,6 @@ namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Paintings\BoxDecoration;
-use Flutterping\Resources\Paintings\EdgeInsets;
 use Flutterping\Resources\Paintings\EdgeInsetsGeometry;
 use Flutterping\Resources\UI\Color;
 
@@ -15,12 +14,18 @@ class Container extends Widget
         return ElementDefinitions::Container;
     }
 
-    protected Color|null $color = null;
-    protected BoxDecoration|null $decoration = null;
-    protected EdgeInsetsGeometry|null $margin = null;
-    protected EdgeInsetsGeometry|null $padding = null;
-    protected float|null $width = null;
-    protected float|null $height = null;
+    protected ?Color $color = null;
+
+    protected ?BoxDecoration $decoration = null;
+
+    protected ?EdgeInsetsGeometry $margin = null;
+
+    protected ?EdgeInsetsGeometry $padding = null;
+
+    protected ?float $width = null;
+
+    protected ?float $height = null;
+
     protected Widget $child;
 
     public function setColor(Color $color): self

@@ -12,6 +12,7 @@ abstract class Action extends Element implements ActionInterface
     {
         $this->type = $this->getType();
     }
+
     public function getType(): string
     {
         return $this->getActionType();

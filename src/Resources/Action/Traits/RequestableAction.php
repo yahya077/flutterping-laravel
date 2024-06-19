@@ -8,9 +8,13 @@ use Flutterping\Resources\Navigation\ApiPath;
 trait RequestableAction
 {
     protected ApiPath $path;
+
     protected string $client;
+
     protected string $method;
+
     protected array $headers;
+
     protected array $body;
 
     public function setClient(string $client): self
@@ -42,7 +46,6 @@ trait RequestableAction
     }
 
     /**
-     * @param ApiPath $path
      * @return NetworkRequestAction|RequestableAction
      */
     public function setPath(ApiPath $path): self

@@ -12,7 +12,6 @@ class NetworkImage extends Element implements ImageInterface
     {
         return ElementDefinitions::NetworkImage;
     }
-    public function __construct(protected string $url)
-    {
-    }
+
+    public function __construct(protected string $url) {}
 }

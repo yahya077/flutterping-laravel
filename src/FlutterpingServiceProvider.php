@@ -2,17 +2,15 @@
 
 namespace Flutterping;
 
-use Flutterping\Resources\Action\Action;
+use Flutterping\Commands\FlutterpingCommand;
 use Flutterping\Resources\Action\AlertAction;
 use Flutterping\Resources\Event\ActionEvent;
 use Flutterping\Resources\UI\Color;
-use Flutterping\Resources\Widgets\StatefulWidget;
 use Flutterping\Resources\Widgets\Text;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
-use Flutterping\Commands\FlutterpingCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FlutterpingServiceProvider extends PackageServiceProvider
 {
@@ -43,6 +41,7 @@ class FlutterpingServiceProvider extends PackageServiceProvider
                 'error' => Color::fromRGB(255, 0, 0),
                 default => Color::fromRGB(0, 0, 255),
             };
+
             return Response::json((new ActionEvent())->setAction((new AlertAction())->setContent((new Text($alertMessage)))->setColor($color))->toArray());
         });
     }

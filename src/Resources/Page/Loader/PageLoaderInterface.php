@@ -2,7 +2,4 @@
 
 namespace Flutterping\Resources\Page\Loader;
 
-interface PageLoaderInterface
-{
-
-}
+interface PageLoaderInterface {}

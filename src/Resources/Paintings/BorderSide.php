@@ -2,7 +2,6 @@
 
 namespace Flutterping\Resources\Paintings;
 
-use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Element;
 use Flutterping\Resources\UI\Color;
@@ -13,7 +12,9 @@ class BorderSide extends Element
     {
         return ElementDefinitions::BorderSide;
     }
+
     protected Color $color;
+
     protected float $width;
 
     public function __construct(Color $color, float $width = 1.0)

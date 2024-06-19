@@ -7,8 +7,11 @@ use Flutterping\Resources\Element;
 abstract class EdgeInsetsGeometry extends Element
 {
     public ?float $left;
+
     public ?float $top;
+
     public ?float $right;
+
     public ?float $bottom;
 
     public function __construct(?float $left = null, ?float $top = null, ?float $right = null, ?float $bottom = null)

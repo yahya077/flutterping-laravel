@@ -7,11 +7,17 @@ use Flutterping\Resources\Contracts\ColorInterface;
 class IconThemeData
 {
     protected ?float $size;
+
     protected ?float $fill;
+
     protected ?float $weight;
+
     protected ?float $grade;
+
     protected ?float $opticalSize;
+
     protected ?ColorInterface $color;
+
     protected ?float $opacity;
 
     public function setSize(float $size): self

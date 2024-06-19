@@ -8,7 +8,9 @@ use Flutterping\Resources\Element;
 class Axis extends Element
 {
     protected string $value;
+
     public const horizontal = 'horizontal';
+
     public const vertical = 'vertical';
 
     public const values = [
@@ -18,18 +20,18 @@ class Axis extends Element
 
     public function __construct($value)
     {
-        if (!in_array($value, self::values)) {
+        if (! in_array($value, self::values)) {
             throw new \InvalidArgumentException('Invalid value for Axis');
         }
         $this->value = $value;
     }
 
-    static public function horizontal(): Axis
+    public static function horizontal(): Axis
     {
         return new static(self::horizontal);
     }
 
-    static public function vertical(): Axis
+    public static function vertical(): Axis
     {
         return new static(self::vertical);
     }

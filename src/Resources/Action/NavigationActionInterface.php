@@ -2,6 +2,4 @@
 
 namespace Flutterping\Resources\Action;
 
-interface NavigationActionInterface
-{
-}
+interface NavigationActionInterface {}

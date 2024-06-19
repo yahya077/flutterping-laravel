@@ -11,6 +11,7 @@ abstract class Route extends Element implements RouteInterface
     public function setStateId(string $stateId): self
     {
         $this->stateId = $stateId;
+
         return $this;
     }
 }

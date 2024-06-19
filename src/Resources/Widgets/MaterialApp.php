@@ -7,6 +7,7 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 class MaterialApp extends Widget
 {
     protected Widget $home;
+
     protected bool $debugShowCheckedModeBanner = true;
 
     public function __construct(Widget $home)

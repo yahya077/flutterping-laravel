@@ -12,10 +12,15 @@ class BoxDecoration extends Element
     {
         return ElementDefinitions::BoxDecoration;
     }
+
     protected Color $color;
+
     protected DecorationImage $image;
+
     protected Border $border;
+
     protected BorderRadius $borderRadius;
+
     /*
      * @var BoxShadow[]
      */

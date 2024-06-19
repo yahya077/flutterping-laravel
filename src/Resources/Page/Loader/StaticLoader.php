@@ -2,7 +2,4 @@
 
 namespace Flutterping\Resources\Page\Loader;
 
-class StaticLoader extends PageLoader
-{
-
-}
+class StaticLoader extends PageLoader {}

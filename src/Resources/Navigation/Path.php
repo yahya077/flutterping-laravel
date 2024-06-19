@@ -6,9 +6,7 @@ use Flutterping\Resources\Element;
 
 class Path extends Element
 {
-    public function __construct(protected string $path)
-    {
-    }
+    public function __construct(protected string $path) {}
 
     public function setPath(string $path)
     {

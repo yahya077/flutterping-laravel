@@ -14,7 +14,9 @@ class StatefulShellRouteWithIndexedStack extends NestedRouteBase
     }
 
     protected string $parentNavigatorKey;
+
     protected array|StatefulShellBranchInterface $branches;
+
     protected PageInterface $wrapperPage;
 
     public function setParentNavigatorKey(string $parentNavigatorKey): self

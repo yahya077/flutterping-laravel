@@ -24,8 +24,8 @@ class DynamicWidget extends Widget
         return ElementDefinitions::DynamicWidget;
     }
 
-    static function fromState(String $stateKey): DynamicWidget
+    public static function fromState(string $stateKey): DynamicWidget
     {
-        return (new DynamicWidget(Value::fromState($stateKey)));
+        return new DynamicWidget(Value::fromState($stateKey));
     }
 }

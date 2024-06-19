@@ -2,7 +2,4 @@
 
 namespace Flutterping\Resources\Paintings;
 
-abstract class EdgeInsets extends EdgeInsetsGeometry
-{
-
-}
+abstract class EdgeInsets extends EdgeInsetsGeometry {}

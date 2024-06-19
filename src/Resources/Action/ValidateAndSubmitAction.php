@@ -5,6 +5,7 @@ namespace Flutterping\Resources\Action;
 class ValidateAndSubmitAction extends Action
 {
     protected NetworkRequestAction $submitAction;
+
     protected string $formStateId;
 
     public function setSubmitAction(NetworkRequestAction $submitAction): self

@@ -2,7 +2,4 @@
 
 namespace Flutterping\Resources\Navigation;
 
-interface RouteInterface
-{
-
-}
+interface RouteInterface {}

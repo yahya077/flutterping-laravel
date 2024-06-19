@@ -13,11 +13,17 @@ class MainAxisAlignment extends Element
     }
 
     public const start = 'start';
+
     public const end = 'end';
+
     public const center = 'center';
+
     public const spaceBetween = 'spaceBetween';
+
     public const spaceAround = 'spaceAround';
+
     public const spaceEvenly = 'spaceEvenly';
+
     public const values = [
         self::start,
         self::end,
@@ -30,37 +36,37 @@ class MainAxisAlignment extends Element
     public function __construct(
         protected string $value
     ) {
-        if (!in_array($this->value, self::values)) {
+        if (! in_array($this->value, self::values)) {
             throw new \InvalidArgumentException('Invalid value for MainAxisAlignment');
         }
     }
 
-    static public function start(): MainAxisAlignment
+    public static function start(): MainAxisAlignment
     {
         return new static(self::start);
     }
 
-    static public function end(): MainAxisAlignment
+    public static function end(): MainAxisAlignment
     {
         return new static(self::end);
     }
 
-    static public function center(): MainAxisAlignment
+    public static function center(): MainAxisAlignment
     {
         return new static(self::center);
     }
 
-    static public function spaceBetween(): MainAxisAlignment
+    public static function spaceBetween(): MainAxisAlignment
     {
         return new static(self::spaceBetween);
     }
 
-    static public function spaceAround(): MainAxisAlignment
+    public static function spaceAround(): MainAxisAlignment
     {
         return new static(self::spaceAround);
     }
 
-    static public function spaceEvenly(): MainAxisAlignment
+    public static function spaceEvenly(): MainAxisAlignment
     {
         return new static(self::spaceEvenly);
     }

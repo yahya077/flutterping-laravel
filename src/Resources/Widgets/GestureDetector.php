@@ -4,7 +4,6 @@ namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Event\Event;
-use Flutterping\Resources\Paintings\TextStyle;
 
 class GestureDetector extends Widget
 {
@@ -20,12 +19,14 @@ class GestureDetector extends Widget
     public function setOnTap(Event $onTap): GestureDetector
     {
         $this->onTap = $onTap;
+
         return $this;
     }
 
     public function setChild(Widget $child): GestureDetector
     {
         $this->child = $child;
+
         return $this;
     }
 }

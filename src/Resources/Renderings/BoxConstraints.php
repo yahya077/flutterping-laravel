@@ -7,8 +7,11 @@ use Flutterping\Resources\Renderable;
 class BoxConstraints extends Renderable
 {
     protected float $minWidth;
+
     protected float $maxWidth;
+
     protected float $minHeight;
+
     protected float $maxHeight;
 
     public function setMinWidth(float $minWidth): void

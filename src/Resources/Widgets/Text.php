@@ -13,6 +13,7 @@ class Text extends Widget
     }
 
     protected string $text;
+
     protected TextStyle $style;
 
     public function __construct($text)

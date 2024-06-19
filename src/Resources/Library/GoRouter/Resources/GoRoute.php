@@ -13,10 +13,15 @@ class GoRoute extends Route
     }
 
     protected ?string $name;
+
     protected ?string $path;
+
     protected PageInterface $page;
+
     protected ?string $parentNavigatorKey;
+
     protected ?string $redirect;
+
     protected array|Route $routes;
 
     public function setName(string $name): self

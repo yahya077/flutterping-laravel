@@ -10,7 +10,7 @@ trait NavigatableAction
     protected NavigationPath $path;
 
     /**
-     * @param Path $path
+     * @param  Path  $path
      */
     public function setPath(NavigationPath $path): self
     {

@@ -3,17 +3,13 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Material\InputDecoration;
-use Flutterping\Resources\Paintings\TextStyle;
-use Flutterping\Resources\Renderings\TextCapitalization;
-use Flutterping\Resources\Renderings\TextInputAction;
-use Flutterping\Resources\Renderings\TextInputType;
-use Flutterping\Resources\UI\TextDirection;
 
 class Form extends Widget
 {
     protected string $id;
+
     protected string $parentStateId;
+
     protected array|Widget $formWidgets;
 
     public function __construct(string $id, array $formWidgets = [])
@@ -46,6 +42,7 @@ class Form extends Widget
     public function setParentStateId(string $parentStateId): self
     {
         $this->parentStateId = $parentStateId;
+
         return $this;
     }
 

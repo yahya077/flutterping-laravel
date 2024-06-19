@@ -14,12 +14,14 @@ trait AlertableAction
     public function setContent(Widget $content): self
     {
         $this->content = $content;
+
         return $this;
     }
 
     public function setColor(Color $color): self
     {
         $this->color = $color;
+
         return $this;
     }
 }

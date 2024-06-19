@@ -3,7 +3,6 @@
 namespace Flutterping\Resources\Navigation;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
 
 class ApiPath extends Path
 {
@@ -15,6 +14,7 @@ class ApiPath extends Path
     public function setBaseUrl($baseUrl)
     {
         $this->baseUrl = $baseUrl;
+
         return $this;
     }
 

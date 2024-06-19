@@ -6,7 +6,7 @@ use Flutterping\Resources\Widgets\Widget;
 
 class LazyLoader extends PageLoader
 {
-    protected String $url;
+    protected string $url;
 
     protected ?Widget $loaderWidget;
 }
