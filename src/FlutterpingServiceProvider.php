@@ -7,10 +7,9 @@ use Flutterping\Resources\Event\ActionEvent;
 use Flutterping\Resources\Renderable;
 use Flutterping\Resources\UI\Color;
 use Flutterping\Resources\Widgets\Text;
+use Illuminate\Support\Facades\Response;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
 use Flutterping\Commands\FlutterpingCommand;
 
 class FlutterpingServiceProvider extends PackageServiceProvider
@@ -42,14 +41,17 @@ class FlutterpingServiceProvider extends PackageServiceProvider
                 'error' => Color::fromRGB(255, 0, 0),
                 default => Color::fromRGB(0, 0, 255),
             };
+
             return Response::json((new ActionEvent())->setAction((new AlertAction())->setContent((new Text($alertMessage)))->setColor($color))->toArray());
+        });
+
+        Response::macro('flutterping', function (Renderable $renderable) {
+            return Response::json($renderable->render());
         });
     }
 
     protected function registerRequestMacro(): void
     {
-        Request::macro('flutterping', function () {
-            return (bool) $this->header('X-FlutterPing');
-        });
+        // TODO: set up request macro
     }
 }
