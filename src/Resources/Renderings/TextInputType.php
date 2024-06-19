@@ -7,12 +7,19 @@ use Flutterping\Resources\Renderable;
 class TextInputType extends Renderable
 {
     const text = 'text';
+
     const multiline = 'multiline';
+
     const number = 'number';
+
     const phone = 'phone';
+
     const datetime = 'datetime';
+
     const emailAddress = 'emailAddress';
+
     const url = 'url';
+
     const visiblePassword = 'visiblePassword';
 
     public const values = [
@@ -29,47 +36,47 @@ class TextInputType extends Renderable
     public function __construct(
         protected string $value
     ) {
-        if (!in_array($this->value, self::values)) {
+        if (! in_array($this->value, self::values)) {
             throw new \InvalidArgumentException('Invalid value for TextInputType');
         }
     }
 
-    static public function text(): TextInputType
+    public static function text(): TextInputType
     {
         return new static(self::text);
     }
 
-    static public function multiline(): TextInputType
+    public static function multiline(): TextInputType
     {
         return new static(self::multiline);
     }
 
-    static public function number(): TextInputType
+    public static function number(): TextInputType
     {
         return new static(self::number);
     }
 
-    static public function phone(): TextInputType
+    public static function phone(): TextInputType
     {
         return new static(self::phone);
     }
 
-    static public function datetime(): TextInputType
+    public static function datetime(): TextInputType
     {
         return new static(self::datetime);
     }
 
-    static public function emailAddress(): TextInputType
+    public static function emailAddress(): TextInputType
     {
         return new static(self::emailAddress);
     }
 
-    static public function url(): TextInputType
+    public static function url(): TextInputType
     {
         return new static(self::url);
     }
 
-    static public function visiblePassword(): TextInputType
+    public static function visiblePassword(): TextInputType
     {
         return new static(self::visiblePassword);
     }

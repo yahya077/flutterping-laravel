@@ -9,6 +9,7 @@ class BehaviourAction extends Action
     public function setBehaviourType(string $behaviourType): self
     {
         $this->behaviourType = $behaviourType;
+
         return $this;
     }
 

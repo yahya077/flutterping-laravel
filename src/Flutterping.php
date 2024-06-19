@@ -5,8 +5,8 @@ namespace Flutterping;
 use Closure;
 use Illuminate\Support\Facades\App;
 
-class Flutterping {
-    /** @var Closure|string|null */
+class Flutterping
+{
     protected Closure|string|null $appVersion;
 
     public function appVersion($appVersion): void
@@ -20,6 +20,6 @@ class Flutterping {
             ? App::call($this->appVersion)
             : $this->appVersion;
 
-        return (string)$appVersion;
+        return (string) $appVersion;
     }
 }

@@ -14,12 +14,14 @@ class NavigationPath extends Path
     public function setStackKey($stackKey)
     {
         $this->stackKey = $stackKey;
+
         return $this;
     }
 
     public function setIndex($index)
     {
         $this->index = $index;
+
         return $this;
     }
 

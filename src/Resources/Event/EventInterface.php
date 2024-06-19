@@ -2,6 +2,4 @@
 
 namespace Flutterping\Resources\Event;
 
-interface EventInterface
-{
-}
+interface EventInterface {}

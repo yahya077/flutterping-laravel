@@ -2,7 +2,4 @@
 
 namespace Flutterping\Resources\Widgets;
 
-abstract class StatefulWidget extends Widget
-{
-
-}
+abstract class StatefulWidget extends Widget {}

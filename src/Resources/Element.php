@@ -3,12 +3,12 @@
 namespace Flutterping\Resources;
 
 use Flutterping\Resources\Contracts\ElementInterface;
-use ReturnTypeWillChange;
 
 abstract class Element extends Renderable implements ElementInterface
 {
     abstract public function getType(): string;
-    public function toArray(): array|null
+
+    public function toArray(): ?array
     {
         $objectVars = parent::toArray();
 

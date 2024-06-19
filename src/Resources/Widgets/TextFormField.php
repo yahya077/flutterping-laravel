@@ -13,16 +13,27 @@ use Flutterping\Resources\UI\TextDirection;
 class TextFormField extends Widget
 {
     protected string $name;
+
     protected string $formId;
+
     protected mixed $initialValue;
+
     protected InputDecoration $decoration;
+
     protected TextInputType $keyboardType;
+
     protected TextCapitalization $textCapitalization;
+
     protected TextInputAction $textInputAction;
+
     protected TextStyle $style;
+
     protected TextDirection $textDirection;
+
     protected bool $obscureText;
+
     protected bool $autofocus;
+
     protected bool $readOnly;
 
     public function __construct(string $name, string $formId)

@@ -29,7 +29,7 @@ class Color extends Element implements ColorInterface
         $this->alpha = $alpha;
     }
 
-    static public function fromHex($hex): self
+    public static function fromHex($hex): self
     {
         $hex = str_replace('#', '', $hex);
         $red = hexdec(substr($hex, 0, 2));
@@ -39,12 +39,12 @@ class Color extends Element implements ColorInterface
         return self::fromRGB($red, $green, $blue);
     }
 
-    static public function fromRGB($red, $green, $blue, $alpha = 255): self
+    public static function fromRGB($red, $green, $blue, $alpha = 255): self
     {
         return new self($red, $green, $blue, $alpha);
     }
 
-    static public function fromRGBA($red, $green, $blue, $alpha): self
+    public static function fromRGBA($red, $green, $blue, $alpha): self
     {
         return new self($red, $green, $blue, $alpha);
     }

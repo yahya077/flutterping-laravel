@@ -11,6 +11,7 @@ abstract class StackedRoute extends Element implements RouteInterface
     public function setStackIndex(int $stackIndex): self
     {
         $this->stackIndex = $stackIndex;
+
         return $this;
     }
 }

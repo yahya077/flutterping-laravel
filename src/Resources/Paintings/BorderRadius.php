@@ -11,30 +11,30 @@ class BorderRadius extends Element
     {
         return ElementDefinitions::BorderRadius;
     }
+
     public function __construct(
         protected float $topLeft = 0.0,
         protected float $topRight = 0.0,
         protected float $bottomRight = 0.0,
         protected float $bottomLeft = 0.0,
-    )
-    {
+    ) {
         //
     }
 
-    static public function all(
+    public static function all(
         float $radius
     ): static {
         return new static($radius, $radius, $radius, $radius);
     }
 
-    static public function symmetric(
+    public static function symmetric(
         float $vertical,
         float $horizontal
     ): static {
         return new static($vertical, $horizontal, $vertical, $horizontal);
     }
 
-    static public function fromRadius(
+    public static function fromRadius(
         float $radius
     ): static {
         return new static($radius, $radius, $radius, $radius);

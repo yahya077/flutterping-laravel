@@ -14,54 +14,103 @@ use Flutterping\Resources\Widgets\Widget;
 class InputDecoration extends Renderable
 {
     protected Widget $icon;
+
     protected ColorInterface $color;
+
     protected Widget $label;
+
     protected string $labelText;
+
     protected TextStyle $labelStyle;
+
     protected TextStyle $floatingLabelStyle;
+
     protected string $helperText;
+
     protected TextStyle $helperStyle;
+
     protected int $helperMaxLines;
+
     protected string $hintText;
+
     protected TextStyle $hintStyle;
+
     protected TextDirection $hintTextDirection;
+
     protected int $hintMaxLines;
+
     protected Widget $error;
+
     protected string $errorText;
+
     protected TextStyle $errorStyle;
+
     protected int $errorMaxLines;
+
     protected Widget $prefix;
+
     protected FloatingLabelBehavior $floatingLabelBehavior;
+
     protected FloatingLabelBehavior $floatingLabelAlignment;
+
     protected bool $isDense;
+
     protected EdgeInsetsPadding $contentPadding;
+
     protected bool $isCollapsed;
+
     protected Widget $prefixIcon;
+
     protected BoxConstraints $prefixIconConstraints;
+
     protected string $prefixText;
+
     protected TextStyle $prefixStyle;
+
     protected ColorInterface $prefixIconColor;
+
     protected Widget $suffixIcon;
+
     protected Widget $suffix;
+
     protected string $suffixText;
+
     protected TextStyle $suffixStyle;
+
     protected ColorInterface $suffixIconColor;
+
     protected BoxConstraints $suffixIconConstraints;
+
     protected Widget $counter;
+
     protected TextStyle $counterStyle;
+
     protected bool $filled;
+
     protected ColorInterface $fillColor;
+
     protected ColorInterface $focusColor;
+
     protected ColorInterface $hoverColor;
+
     protected InputBorder $errorBorder;
+
     protected InputBorder $focusedBorder;
+
     protected InputBorder $focusedErrorBorder;
+
     protected InputBorder $disabledBorder;
+
     protected InputBorder $enabledBorder;
+
     protected InputBorder $border;
+
     protected bool $enabled;
+
     protected string $semanticCounterText;
+
     protected bool $alignLabelWithHint;
+
     protected BoxConstraints $constraints;
 
     public function setIcon(Widget $icon): self

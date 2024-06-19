@@ -2,6 +2,4 @@
 
 namespace Flutterping\Resources\Widgets;
 
-abstract class PreferredSizeWidget extends Widget
-{
-}
+abstract class PreferredSizeWidget extends Widget {}

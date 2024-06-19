@@ -13,6 +13,7 @@ class StatefulShellBranch extends StackedRoute implements StatefulShellBranchInt
     }
 
     protected ?string $navigatorKey;
+
     protected array|Route $routes;
 
     public function setNavigatorKey(string $navigatorKey): self

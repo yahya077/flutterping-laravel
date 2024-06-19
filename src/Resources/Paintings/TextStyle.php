@@ -13,10 +13,15 @@ class TextStyle extends Element
     {
         return ElementDefinitions::TextStyle;
     }
+
     protected bool $inherit = true;
+
     protected Color $color;
+
     protected Color $backgroundColor;
+
     protected float $fontSize;
+
     protected FontWeight $fontWeight;
 
     public function setInherit(bool $inherit): self

@@ -3,7 +3,6 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Paintings\TextStyle;
 use Flutterping\Resources\UI\Color;
 
 class AppBar extends PreferredSizeWidget
@@ -14,10 +13,15 @@ class AppBar extends PreferredSizeWidget
     }
 
     protected ?Widget $title;
+
     protected ?Widget $leading;
+
     protected array|Widget|null $actions;
+
     protected ?float $elevation;
+
     protected ?Color $backgroundColor;
+
     protected ?bool $centerTitle = false;
 
     public function setTitle(Widget $title): self

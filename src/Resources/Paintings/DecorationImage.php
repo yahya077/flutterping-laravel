@@ -11,8 +11,11 @@ class DecorationImage
     {
         return ElementDefinitions::DecorationImage;
     }
+
     protected ImageInterface $image;
+
     protected BoxFit $fit;
+
     protected float $opacity;
 
     public function setImage(ImageInterface $image): self

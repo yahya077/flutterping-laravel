@@ -8,7 +8,7 @@ class ActionEvent extends BaseEvent
 {
     public function __construct()
     {
-        $this->name = "ActionEvent";
+        $this->name = 'ActionEvent';
     }
 
     public function setAction(ActionInterface $action): self

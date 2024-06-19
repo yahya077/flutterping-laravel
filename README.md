@@ -7,6 +7,8 @@
 
 This package provides a Laravel adapter for [Flutter Ping](https://docs.flutterping.com/).
 
+![simple_code_example](https://github.com/yahya077/flutterping-laravel/assets/46659611/2b8ce637-d756-4672-b258-c08f4cad43af)
+
 ## Installation
 
 You can install the package via composer:

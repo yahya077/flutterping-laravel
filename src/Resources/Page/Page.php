@@ -3,13 +3,14 @@
 namespace Flutterping\Resources\Page;
 
 use Flutterping\Resources\Page\Loader\PageLoader;
-use Flutterping\Resources\Element;
 use Flutterping\Resources\Widgets\Widget;
 
 abstract class Page extends Widget implements PageInterface
 {
     protected Widget $child;
+
     protected string $stateId;
+
     protected ?PageLoader $pageLoader;
 
     public function setChild(Widget $child): self

@@ -13,10 +13,15 @@ class CrossAxisAlignment extends Element
     }
 
     public const start = 'start';
+
     public const end = 'end';
+
     public const center = 'center';
+
     public const stretch = 'stretch';
+
     public const baseline = 'baseline';
+
     public const values = [
         self::start,
         self::end,
@@ -28,32 +33,32 @@ class CrossAxisAlignment extends Element
     public function __construct(
         protected string $value
     ) {
-        if (!in_array($this->value, self::values)) {
+        if (! in_array($this->value, self::values)) {
             throw new \InvalidArgumentException('Invalid value for CrossAxisAlignment');
         }
     }
 
-    static public function start(): CrossAxisAlignment
+    public static function start(): CrossAxisAlignment
     {
         return new static(self::start);
     }
 
-    static public function end(): CrossAxisAlignment
+    public static function end(): CrossAxisAlignment
     {
         return new static(self::end);
     }
 
-    static public function center(): CrossAxisAlignment
+    public static function center(): CrossAxisAlignment
     {
         return new static(self::center);
     }
 
-    static public function stretch(): CrossAxisAlignment
+    public static function stretch(): CrossAxisAlignment
     {
         return new static(self::stretch);
     }
 
-    static public function baseline(): CrossAxisAlignment
+    public static function baseline(): CrossAxisAlignment
     {
         return new static(self::baseline);
     }

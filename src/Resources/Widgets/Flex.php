@@ -12,8 +12,11 @@ class Flex extends Widget
     {
         return ElementDefinitions::Flex;
     }
+
     protected MainAxisAlignment $mainAxisAlignment;
+
     protected CrossAxisAlignment $crossAxisAlignment;
+
     /**
      * @var array<Widget>
      */

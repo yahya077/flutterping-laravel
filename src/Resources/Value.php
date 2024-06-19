@@ -5,6 +5,7 @@ namespace Flutterping\Resources;
 class Value extends Element
 {
     protected string $type = 'value';
+
     protected mixed $value;
 
     public function __construct($value)
@@ -15,22 +16,23 @@ class Value extends Element
     public function setType(string $type)
     {
         $this->type = $type;
+
         return $this;
     }
 
-    static function emptyValue(): Value
+    public static function emptyValue(): Value
     {
         return new Value(null);
     }
 
-    static function fromState(string $stateKey): Value
+    public static function fromState(string $stateKey): Value
     {
         return (new Value($stateKey))->setType('state');
     }
 
-    static function value(string $value): Value
+    public static function value(string $value): Value
     {
-        return (new Value($value));
+        return new Value($value);
     }
 
     public function getType(): string

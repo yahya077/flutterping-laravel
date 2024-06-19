@@ -18,17 +18,17 @@ class TextDirection extends Renderable
     public function __construct(
         protected string $value
     ) {
-        if (!in_array($this->value, self::values)) {
+        if (! in_array($this->value, self::values)) {
             throw new \InvalidArgumentException('Invalid value for TextDirection');
         }
     }
 
-    static public function ltr(): TextDirection
+    public static function ltr(): TextDirection
     {
         return new static(self::ltr);
     }
 
-    static public function rtl(): TextDirection
+    public static function rtl(): TextDirection
     {
         return new static(self::rtl);
     }

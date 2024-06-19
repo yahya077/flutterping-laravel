@@ -44,14 +44,12 @@ class FlutterpingServiceProvider extends PackageServiceProvider
             };
             return Response::json((new ActionEvent())->setAction((new AlertAction())->setContent((new Text($alertMessage)))->setColor($color))->toArray());
         });
-
-        Response::macro('flutterping', function (Renderable $renderable) {
-            return Response::json($renderable->render());
-        });
     }
 
     protected function registerRequestMacro(): void
     {
-        // TODO: set up request macro
+        Request::macro('flutterping', function () {
+            return (bool) $this->header('X-FlutterPing');
+        });
     }
 }

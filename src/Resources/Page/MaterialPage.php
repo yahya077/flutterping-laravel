@@ -14,6 +14,7 @@ class MaterialPage extends Element implements PageInterface
     }
 
     protected Widget $child;
+
     protected bool $fullscreenDialog = false;
 
     public function setChild(Widget $child): self

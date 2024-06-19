@@ -12,6 +12,7 @@ class SizedBox extends Widget
     }
 
     public $width;
+
     public $height;
 
     public function __construct($width = null, $height = null)
@@ -20,7 +21,8 @@ class SizedBox extends Widget
         $this->height = $height;
     }
 
-    static function shrink() {
+    public static function shrink()
+    {
         return new SizedBox(0, 0);
     }
 }

@@ -2,7 +2,4 @@
 
 namespace Flutterping\Resources\Contracts;
 
-interface ColorInterface
-{
-
-}
+interface ColorInterface {}

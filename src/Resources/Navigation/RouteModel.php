@@ -4,7 +4,7 @@ namespace Flutterping\Resources\Navigation;
 
 class RouteModel implements \JsonSerializable
 {
-    protected string $initialRoutePath = "/";
+    protected string $initialRoutePath = '/';
 
     protected array|Route $routes;
 
@@ -25,8 +25,8 @@ class RouteModel implements \JsonSerializable
     public function jsonSerialize(): mixed
     {
         return [
-            "initialRoutePath" => $this->initialRoutePath,
-            "routes" => collect($this->routes)->map(fn($route) => $route->jsonSerialize())->toArray(),
+            'initialRoutePath' => $this->initialRoutePath,
+            'routes' => collect($this->routes)->map(fn ($route) => $route->jsonSerialize())->toArray(),
         ];
     }
 }

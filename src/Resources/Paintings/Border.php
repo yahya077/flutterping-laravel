@@ -12,30 +12,31 @@ class Border extends Element
     {
         return ElementDefinitions::Border;
     }
+
     public function __construct(
         protected BorderSide $top,
         protected BorderSide $right,
         protected BorderSide $bottom,
         protected BorderSide $left
-    ) {
-    }
+    ) {}
 
-    static public function all(
+    public static function all(
         ColorInterface $color,
         float $width = 1.0
     ): static {
         $side = new BorderSide($color, $width);
+
         return new static($side, $side, $side, $side);
     }
 
-    static public function symmetric(
+    public static function symmetric(
         BorderSide $vertical,
         BorderSide $horizontal
     ): static {
         return new static($vertical, $horizontal, $vertical, $horizontal);
     }
 
-    static public function fromBorderSide(
+    public static function fromBorderSide(
         BorderSide $side
     ): static {
         return new static($side, $side, $side, $side);
