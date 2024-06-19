@@ -2,9 +2,9 @@
 
 namespace Flutterping\FlutterpingLaravel\Tests;
 
+use Flutterping\FlutterpingLaravel\FlutterpingLaravelServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Flutterping\FlutterpingLaravel\FlutterpingLaravelServiceProvider;
 
 class TestCase extends Orchestra
 {

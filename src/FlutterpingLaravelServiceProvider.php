@@ -2,9 +2,9 @@
 
 namespace Flutterping\FlutterpingLaravel;
 
+use Flutterping\FlutterpingLaravel\Commands\FlutterpingLaravelCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Flutterping\FlutterpingLaravel\Commands\FlutterpingLaravelCommand;
 
 class FlutterpingLaravelServiceProvider extends PackageServiceProvider
 {
