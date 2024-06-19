@@ -2,6 +2,7 @@
 
 namespace Flutterping;
 
+use Flutterping\Commands\FlutterpingCommand;
 use Flutterping\Resources\Action\AlertAction;
 use Flutterping\Resources\Event\ActionEvent;
 use Flutterping\Resources\Renderable;
@@ -10,7 +11,6 @@ use Flutterping\Resources\Widgets\Text;
 use Illuminate\Support\Facades\Response;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Flutterping\Commands\FlutterpingCommand;
 
 class FlutterpingServiceProvider extends PackageServiceProvider
 {
