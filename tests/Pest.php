@@ -1,5 +1,5 @@
 <?php
 
-use Flutterping\FlutterpingLaravel\Tests\TestCase;
+use Flutterping\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

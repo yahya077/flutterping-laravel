@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Flutterping\\FlutterpingLaravel\\": "src/",
-            "Flutterping\\FlutterpingLaravel\\Database\\Factories\\": "database/factories/"
+            "Flutterping\\": "src/",
+            "Flutterping\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Flutterping\\FlutterpingLaravel\\Tests\\": "tests/",
+            "Flutterping\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -72,10 +72,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Flutterping\\FlutterpingLaravel\\FlutterpingLaravelServiceProvider"
+                "Flutterping\\FlutterpingServiceProvider"
             ],
             "aliases": {
-                "FlutterpingLaravel": "Flutterping\\FlutterpingLaravel\\Facades\\FlutterpingLaravel"
+                "Flutterping": "Flutterping\\Facades\\Flutterping"
             }
         }
     },

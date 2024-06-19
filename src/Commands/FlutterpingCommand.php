@@ -1,10 +1,10 @@
 <?php
 
-namespace Flutterping\FlutterpingLaravel\Commands;
+namespace Flutterping\Commands;
 
 use Illuminate\Console\Command;
 
-class FlutterpingLaravelCommand extends Command
+class FlutterpingCommand extends Command
 {
     public $signature = 'flutterping-laravel';
 

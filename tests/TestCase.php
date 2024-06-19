@@ -1,10 +1,10 @@
 <?php
 
-namespace Flutterping\FlutterpingLaravel\Tests;
+namespace Flutterping\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Flutterping\FlutterpingLaravel\FlutterpingLaravelServiceProvider;
+use Flutterping\FlutterpingServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Flutterping\\FlutterpingLaravel\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Flutterping\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            FlutterpingLaravelServiceProvider::class,
+            FlutterpingServiceProvider::class,
         ];
     }
 

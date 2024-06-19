@@ -1,6 +1,6 @@
 <?php
 
-namespace Flutterping\FlutterpingLaravel\Database\Factories;
+namespace Flutterping\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
