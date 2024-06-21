@@ -14,10 +14,10 @@ class Border extends Element
     }
 
     public function __construct(
-        protected BorderSide $top,
-        protected BorderSide $right,
-        protected BorderSide $bottom,
-        protected BorderSide $left
+        protected ?BorderSide $top = null,
+        protected ?BorderSide $right = null,
+        protected ?BorderSide $bottom = null,
+        protected ?BorderSide $left = null
     ) {}
 
     public static function all(
