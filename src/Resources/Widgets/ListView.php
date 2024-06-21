@@ -3,6 +3,7 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Foundation\ScrollController;
 use Flutterping\Resources\Paintings\Axis;
 
 class ListView extends Widget
@@ -19,6 +20,8 @@ class ListView extends Widget
     protected bool $shrinkWrap;
 
     protected array|Widget $items;
+
+    protected ?ScrollController $controller;
 
     public function setScrollDirection(Axis $scrollDirection): ListView
     {
@@ -48,13 +51,21 @@ class ListView extends Widget
         return $this;
     }
 
-    public static function builder(int $itemCount, callable $itemBuilder, $scrollDirection = null, $reverse = null, $shrinkWrap = null): ListView
+    public function setController(?ScrollController $controller): ListView
+    {
+        $this->controller = $controller;
+
+        return $this;
+    }
+
+    public static function builder(int $itemCount, callable $itemBuilder, $scrollController = null, $scrollDirection = null, $reverse = null, $shrinkWrap = null): ListView
     {
 
         $listView = new ListView();
         $listView->setScrollDirection($scrollDirection ?? Axis::vertical());
         $listView->setReverse($reverse ?? false);
         $listView->setShrinkWrap($shrinkWrap ?? false);
+        $listView->setController($scrollController);
 
         $items = [];
 

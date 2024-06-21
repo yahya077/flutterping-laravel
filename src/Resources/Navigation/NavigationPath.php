@@ -6,7 +6,11 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 
 class NavigationPath extends Path
 {
-    public function __construct(protected string $path, protected $stackKey = null, protected $index = null)
+    public function __construct(
+        protected string $path,
+        protected        $stackKey = null,
+        protected        $index = null,
+        protected        $queryParameters = null)
     {
         parent::__construct($path);
     }
@@ -21,6 +25,13 @@ class NavigationPath extends Path
     public function setIndex($index)
     {
         $this->index = $index;
+
+        return $this;
+    }
+
+    public function setQueryParameters($queryParameters)
+    {
+        $this->queryParameters = $queryParameters;
 
         return $this;
     }
