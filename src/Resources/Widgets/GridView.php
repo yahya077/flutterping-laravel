@@ -19,9 +19,11 @@ class GridView extends Widget
     protected bool $reverse;
 
     protected bool $shrinkWrap;
+
     protected SliverGridDelegate $gridDelegate;
 
     protected array|Widget $items;
+
     protected ?ScrollController $controller;
 
     public function setScrollDirection(Axis $scrollDirection): GridView

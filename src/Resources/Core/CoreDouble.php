@@ -8,10 +8,9 @@ class CoreDouble extends Renderable
 {
     public function __construct(
         protected mixed $value
-    )
-    {
-        if (!in_array($this->value, self::values)) {
-            if (!is_double($this->value)) {
+    ) {
+        if (! in_array($this->value, self::values)) {
+            if (! is_float($this->value)) {
                 throw new \InvalidArgumentException('Invalid value for Double');
             }
         }

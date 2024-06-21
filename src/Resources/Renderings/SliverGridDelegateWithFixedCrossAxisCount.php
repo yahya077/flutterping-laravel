@@ -7,7 +7,9 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 class SliverGridDelegateWithFixedCrossAxisCount extends SliverGridDelegate
 {
     protected float $mainAxisSpacing = 0.0;
+
     protected float $crossAxisSpacing = 0.0;
+
     protected float $childAspectRatio = 1.0;
 
     public function getType(): string
@@ -17,9 +19,7 @@ class SliverGridDelegateWithFixedCrossAxisCount extends SliverGridDelegate
 
     public function __construct(
         protected int $crossAxisCount,
-    )
-    {
-    }
+    ) {}
 
     public function setCrossAxisCount(int $crossAxisCount): self
     {
@@ -53,8 +53,7 @@ class SliverGridDelegateWithFixedCrossAxisCount extends SliverGridDelegate
         float $mainAxisSpacing,
         float $crossAxisSpacing,
         float $childAspectRatio
-    ): static
-    {
+    ): static {
         return (new static(0))
             ->setMainAxisSpacing($mainAxisSpacing)
             ->setCrossAxisSpacing($crossAxisSpacing)

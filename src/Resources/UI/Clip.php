@@ -9,14 +9,17 @@ class Clip extends Element
 {
     public function __construct(protected string $clip)
     {
-        if (!in_array($this->clip, self::clips)) {
+        if (! in_array($this->clip, self::clips)) {
             throw new \InvalidArgumentException('Invalid value for Clip');
         }
     }
 
     const antiAlias = 'antiAlias';
+
     const hardEdge = 'hardEdge';
+
     const antiAliasWithSaveLayer = 'antiAliasWithSaveLayer';
+
     const none = 'none';
 
     public const clips = [

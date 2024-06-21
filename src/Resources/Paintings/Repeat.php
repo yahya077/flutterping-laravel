@@ -29,9 +29,8 @@ class Repeat extends Element
 
     public function __construct(
         protected string $value
-    )
-    {
-        if (!in_array($this->value, self::values)) {
+    ) {
+        if (! in_array($this->value, self::values)) {
             throw new \InvalidArgumentException('Invalid value for Repeat');
         }
     }

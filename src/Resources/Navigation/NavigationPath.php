@@ -8,9 +8,9 @@ class NavigationPath extends Path
 {
     public function __construct(
         protected string $path,
-        protected        $stackKey = null,
-        protected        $index = null,
-        protected        $queryParameters = null)
+        protected $stackKey = null,
+        protected $index = null,
+        protected $queryParameters = null)
     {
         parent::__construct($path);
     }

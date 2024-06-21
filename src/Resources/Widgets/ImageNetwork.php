@@ -13,21 +13,30 @@ use Flutterping\Resources\Paintings\Repeat;
 class ImageNetwork extends Widget
 {
     protected string $url;
+
     protected float|CoreDouble $width;
+
     protected float|CoreDouble $height;
+
     protected BoxFit $fit;
+
     protected Alignment $alignment;
+
     protected Repeat $repeat;
 
     protected string $semanticLabel;
 
     protected bool $excludeFromSemantics;
+
     protected FilterQuality $filterQuality;
+
     //protected $loadingBuilder; TODO: Implement this
     //protected $errorBuilder; TODO: Implement this
     //protected $frameBuilder; TODO: Implement this
     protected int $cacheWidth;
+
     protected int $cacheHeight;
+
     protected ColorInterface $color;
 
     public function __construct(string $url)

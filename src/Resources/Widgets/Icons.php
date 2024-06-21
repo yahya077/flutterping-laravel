@@ -41,11 +41,11 @@ class Icons
 
     public static function location_on($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe3ab))->setFontFamily($fontFamily);
+        return (new IconData(0xE3AB))->setFontFamily($fontFamily);
     }
 
     public static function arrow_forward_ios($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe09c))->setFontFamily($fontFamily);
+        return (new IconData(0xE09C))->setFontFamily($fontFamily);
     }
 }

@@ -17,7 +17,6 @@ class SingleChildScrollView extends Widget
 
     protected bool $reverse;
 
-
     protected Widget $child;
 
     protected ScrollController $controller;

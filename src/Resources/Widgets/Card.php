@@ -11,14 +11,23 @@ use Flutterping\Resources\UI\Clip;
 class Card extends Widget
 {
     protected Widget $child;
+
     protected ColorInterface $color;
+
     protected float $elevation;
+
     protected ColorInterface $shadowColor;
+
     protected ColorInterface $surfaceTintColor;
+
     protected Clip $clipBehavior;
+
     protected bool $semanticContainer;
+
     protected bool $borderOnForeground;
+
     protected EdgeInsetsMargin $margin;
+
     protected ShapeBorder $shape;
 
     public function getType(): string
