@@ -2,16 +2,8 @@
 
 namespace Flutterping\Resources\UI;
 
-use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
-
-class FontWeight extends Element
+class FontWeight extends UI
 {
-    public function getType(): string
-    {
-        return ElementDefinitions::FontWeight;
-    }
-
     const w100 = 'w100';
 
     const w200 = 'w200';
@@ -29,26 +21,6 @@ class FontWeight extends Element
     const w800 = 'w800';
 
     const w900 = 'w900';
-
-    public const values = [
-        self::w100,
-        self::w200,
-        self::w300,
-        self::w400,
-        self::w500,
-        self::w600,
-        self::w700,
-        self::w800,
-        self::w900,
-    ];
-
-    public function __construct(
-        protected string $value
-    ) {
-        if (! in_array($this->value, self::values)) {
-            throw new \InvalidArgumentException('Invalid value for FontWeight');
-        }
-    }
 
     public static function w100(): FontWeight
     {

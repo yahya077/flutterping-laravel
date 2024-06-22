@@ -16,7 +16,7 @@ class Scaffold extends StatefulWidget
 
     protected ?Widget $body;
 
-    protected ?AbstractBottomNavigationBar $bottomNavigationBar;
+    protected ?Widget $bottomNavigationBar;
 
     public function setAppBar(AppBar $appBar): self
     {
@@ -32,7 +32,7 @@ class Scaffold extends StatefulWidget
         return $this;
     }
 
-    public function setBottomNavigationBar(AbstractBottomNavigationBar $bottomNavigationBar): self
+    public function setBottomNavigationBar(Widget $bottomNavigationBar): self
     {
         $this->bottomNavigationBar = $bottomNavigationBar;
 

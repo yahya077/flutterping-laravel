@@ -2,34 +2,12 @@
 
 namespace Flutterping\Resources\UI;
 
-use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
-
-class Clip extends Element
+class Clip extends UI
 {
-    public function __construct(protected string $clip)
-    {
-        if (!in_array($this->clip, self::clips)) {
-            throw new \InvalidArgumentException('Invalid value for Clip');
-        }
-    }
-
     const antiAlias = 'antiAlias';
     const hardEdge = 'hardEdge';
     const antiAliasWithSaveLayer = 'antiAliasWithSaveLayer';
     const none = 'none';
-
-    public const clips = [
-        self::antiAlias,
-        self::hardEdge,
-        self::antiAliasWithSaveLayer,
-        self::none,
-    ];
-
-    public function getType(): string
-    {
-        return ElementDefinitions::Clip;
-    }
 
     public static function antiAlias(): Clip
     {

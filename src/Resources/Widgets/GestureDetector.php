@@ -3,7 +3,7 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Event\Event;
+use Flutterping\Resources\Event\BaseEvent;
 
 class GestureDetector extends Widget
 {
@@ -12,11 +12,11 @@ class GestureDetector extends Widget
         return ElementDefinitions::GestureDetector;
     }
 
-    protected Event $onTap;
+    protected BaseEvent $onTap;
 
     protected Widget $child;
 
-    public function setOnTap(Event $onTap): GestureDetector
+    public function setOnTap(BaseEvent $onTap): GestureDetector
     {
         $this->onTap = $onTap;
 

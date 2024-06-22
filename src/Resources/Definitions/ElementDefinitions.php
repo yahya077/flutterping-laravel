@@ -108,6 +108,7 @@ class ElementDefinitions
     const SliverGridDelegateWithFixedCrossAxisCount = 'SliverGridDelegateWithFixedCrossAxisCount';
     const Card = 'Card';
     const RoundedRectangleBorder = 'RoundedRectangleBorder';
-    const Clip = 'Clip';
     const ScrollController = 'ScrollController';
+    const BottomAppBar = 'BottomAppBar';
+    const IntrinsicHeight = 'IntrinsicHeight';
 }
