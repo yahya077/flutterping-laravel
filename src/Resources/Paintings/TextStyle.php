@@ -16,20 +16,35 @@ class TextStyle extends Renderable
     protected bool $inherit = true;
 
     protected Color $color;
+
     protected Color $backgroundColor;
+
     protected float $fontSize;
+
     protected FontWeight $fontWeight;
+
     protected string $fontFamily;
+
     protected FontStyle $fontStyle;
+
     protected TextDecoration $decoration;
+
     protected TextDecorationStyle $decorationStyle;
+
     protected float $decorationThickness;
+
     protected ColorInterface $decorationColor;
+
     protected TextBaseline $textBaseline;
+
     protected float $letterSpacing;
+
     protected float $wordSpacing;
+
     protected float $height;
+
     protected array $fontFamilyFallback;
+
     protected string $package;
 
     public function setInherit(bool $inherit): self

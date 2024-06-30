@@ -5,6 +5,7 @@ namespace Flutterping\Resources\UI;
 class TextBaseline extends UI
 {
     const alphabetic = 'alphabetic';
+
     const ideographic = 'ideographic';
 
     public static function alphabetic(): TextBaseline

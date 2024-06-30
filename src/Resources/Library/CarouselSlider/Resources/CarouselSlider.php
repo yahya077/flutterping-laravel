@@ -8,7 +8,9 @@ use Flutterping\Resources\Widgets\Widget;
 class CarouselSlider extends Widget
 {
     protected array $items = [];
+
     protected CarouselSliderOption $options;
+
     protected CarouselController $controller;
 
     public function setItems(array $items): self

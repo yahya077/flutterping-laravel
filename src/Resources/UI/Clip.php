@@ -5,8 +5,11 @@ namespace Flutterping\Resources\UI;
 class Clip extends UI
 {
     const antiAlias = 'antiAlias';
+
     const hardEdge = 'hardEdge';
+
     const antiAliasWithSaveLayer = 'antiAliasWithSaveLayer';
+
     const none = 'none';
 
     public static function antiAlias(): Clip

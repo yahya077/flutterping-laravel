@@ -8,16 +8,27 @@ use Flutterping\Resources\Renderable;
 class CarouselSliderOption extends Renderable
 {
     protected float $height;
+
     protected float $aspectRatio;
+
     protected float $viewportFraction;
+
     protected int $initialPage;
+
     protected bool $enableInfiniteScroll;
+
     protected bool $animateToClosest;
+
     protected bool $reverse;
+
     protected bool $autoPlay;
+
     protected int $autoPlayInterval;
+
     protected int $autoPlayAnimationDuration;
+
     protected Curves $autoPlayCurve;
+
     protected string $onChangeControllerId;
 
     public function setHeight(float $height): self

@@ -6,8 +6,8 @@ abstract class RenderableProperty extends Renderable
 {
     public function __construct(protected string $value)
     {
-        if (!in_array($this->value, self::values())) {
-            throw new \InvalidArgumentException('Invalid value for ' . static::class);
+        if (! in_array($this->value, self::values())) {
+            throw new \InvalidArgumentException('Invalid value for '.static::class);
         }
     }
 

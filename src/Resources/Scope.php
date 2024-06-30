@@ -5,8 +5,9 @@ namespace Flutterping\Resources;
 class Scope extends Renderable
 {
     public string $id;
+
     /**
-     * @param array<string, mixed> $scopeContext
+     * @param  array<string, mixed>  $scopeContext
      */
     public array $context;
 
@@ -16,11 +17,12 @@ class Scope extends Renderable
     }
 
     /**
-     * @param array<string, mixed> $context
+     * @param  array<string, mixed>  $context
      */
     public function setContext(array $context): self
     {
         $this->context = $context;
+
         return $this;
     }
 }

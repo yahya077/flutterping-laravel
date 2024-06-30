@@ -2,7 +2,6 @@
 
 namespace Flutterping\Resources\Widgets;
 
-use Flutterping\Resources\AbstractBottomNavigationBar;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 
 class Scaffold extends StatefulWidget
