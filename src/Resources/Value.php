@@ -29,6 +29,19 @@ class Value extends Element
     {
         return (new Value($stateKey))->setType('state');
     }
+    // Compatibility with the old version of the package
+    public static function fromNotifierVariable(NotifierVariableValue $value): Value
+    {
+        return (new Value($value))->setType('notifier_variable');
+    }
+
+    public static function fromScope(string $id, mixed $valueKey): Value
+    {
+        return (new Value([
+            "id" => $id,
+            "key" => $valueKey
+        ]))->setType('scope');
+    }
 
     public static function value(string $value): Value
     {

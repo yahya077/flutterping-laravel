@@ -3,6 +3,7 @@
 namespace Flutterping\Resources\Event;
 
 use Flutterping\Resources\Element;
+use Flutterping\Resources\Scope;
 
 abstract class BaseEvent extends Element implements EventInterface
 {
@@ -13,6 +14,7 @@ abstract class BaseEvent extends Element implements EventInterface
     protected string $reactiveWidgetStateId;
 
     protected mixed $payload;
+    protected Scope $scope;
 
     protected function setPayload(mixed $payload): self
     {
@@ -38,6 +40,13 @@ abstract class BaseEvent extends Element implements EventInterface
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function setScope(Scope $scope): self
+    {
+        $this->scope = $scope;
 
         return $this;
     }
