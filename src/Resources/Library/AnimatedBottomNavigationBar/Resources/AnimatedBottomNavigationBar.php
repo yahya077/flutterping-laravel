@@ -11,11 +11,17 @@ use Flutterping\Resources\Widgets\Widget;
 class AnimatedBottomNavigationBar extends Widget
 {
     public array|IconData $items;
+
     public int $activeIndex;
+
     protected array|ActionEvent $onTapEvents;
+
     public ColorInterface $inactiveColor;
+
     public ColorInterface $activeColor;
+
     public float $leftCornerRadius;
+
     public float $rightCornerRadius;
 
     public function getType(): string
