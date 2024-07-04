@@ -2,8 +2,8 @@
 
 namespace Flutterping\Resources\Widgets;
 
-use Flutterping\Resources\AbstractBottomNavigationBar;
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\UI\FloatingActionButtonLocation;
 
 class Scaffold extends StatefulWidget
 {
@@ -15,8 +15,10 @@ class Scaffold extends StatefulWidget
     protected ?AppBar $appBar;
 
     protected ?Widget $body;
+    protected ?Widget $floatingActionButton;
 
     protected ?Widget $bottomNavigationBar;
+    protected FloatingActionButtonLocation $floatingActionButtonLocation;
 
     public function setAppBar(AppBar $appBar): self
     {
@@ -35,6 +37,20 @@ class Scaffold extends StatefulWidget
     public function setBottomNavigationBar(Widget $bottomNavigationBar): self
     {
         $this->bottomNavigationBar = $bottomNavigationBar;
+
+        return $this;
+    }
+
+    public function setFloatingActionButton(Widget $floatingActionButton): self
+    {
+        $this->floatingActionButton = $floatingActionButton;
+
+        return $this;
+    }
+
+    public function setFloatingActionButtonLocation(FloatingActionButtonLocation $floatingActionButtonLocation): self
+    {
+        $this->floatingActionButtonLocation = $floatingActionButtonLocation;
 
         return $this;
     }
