@@ -14,6 +14,7 @@ abstract class BaseEvent extends Element implements EventInterface
     protected string $reactiveWidgetStateId;
 
     protected mixed $payload;
+
     protected Scope $scope;
 
     protected function setPayload(mixed $payload): self

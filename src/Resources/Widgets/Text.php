@@ -17,13 +17,21 @@ class Text extends Widget
     }
 
     protected string $text;
+
     protected TextStyle $style;
+
     protected TextAlign $textAlign;
+
     protected TextDirection $textDirection;
+
     protected bool $softWrap;
+
     protected TextOverflow $overflow;
+
     protected int $maxLines;
+
     protected float $textScaleFactor;
+
     protected TextWidthBasis $textWidthBasis;
 
     public function __construct($text)

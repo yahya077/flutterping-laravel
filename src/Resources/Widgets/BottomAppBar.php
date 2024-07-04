@@ -15,13 +15,21 @@ class BottomAppBar extends Widget
     }
 
     protected Widget $child;
+
     protected ColorInterface $color;
+
     protected float $elevation;
+
     protected Clip $clipBehavior;
+
     protected float $notchMargin;
+
     protected EdgeInsetsPadding $padding;
+
     protected ColorInterface $surfaceTintColor;
+
     protected ColorInterface $shadowColor;
+
     protected float $height;
 
     public function setChild(Widget $child): BottomAppBar

@@ -5,19 +5,33 @@ namespace Flutterping\Resources\Animation;
 class Curves extends Animation
 {
     protected const linear = 'linear';
+
     protected const decelerate = 'decelerate';
+
     protected const fastOutSlowIn = 'fastOutSlowIn';
+
     protected const ease = 'ease';
+
     protected const easeIn = 'easeIn';
+
     protected const easeOut = 'easeOut';
+
     protected const easeInOut = 'easeInOut';
+
     protected const fastLinearToSlowEaseIn = 'fastLinearToSlowEaseIn';
+
     protected const slowMiddle = 'slowMiddle';
+
     protected const bounceIn = 'bounceIn';
+
     protected const bounceOut = 'bounceOut';
+
     protected const bounceInOut = 'bounceInOut';
+
     protected const elasticIn = 'elasticIn';
+
     protected const elasticOut = 'elasticOut';
+
     protected const elasticInOut = 'elasticInOut';
 
     public static function linear(): Curves

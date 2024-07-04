@@ -31,9 +31,13 @@ class ElementDefinitions
     const BoxDecoration = 'BoxDecoration';
 
     const BoxFit = 'BoxFit';
+
     const Alignment = 'Alignment';
+
     const Repeat = 'Repeat';
+
     const FilterQuality = 'FilterQuality';
+
     const ImageNetwork = 'ImageNetwork';
 
     const Axis = 'Axis';
@@ -89,7 +93,9 @@ class ElementDefinitions
     const DynamicWidget = 'DynamicWidget';
 
     const ListView = 'ListView';
+
     const GridView = 'GridView';
+
     const SingleChildScrollView = 'SingleChildScrollView';
 
     const GestureDetector = 'GestureDetector';
@@ -105,11 +111,17 @@ class ElementDefinitions
     const MaterialApp = 'MaterialApp';
 
     const MaterialAppRouter = 'MaterialAppRouter';
+
     const SliverGridDelegateWithFixedCrossAxisCount = 'SliverGridDelegateWithFixedCrossAxisCount';
+
     const Card = 'Card';
+
     const RoundedRectangleBorder = 'RoundedRectangleBorder';
+
     const ScrollController = 'ScrollController';
+
     const BottomAppBar = 'BottomAppBar';
+
     const IntrinsicHeight = 'IntrinsicHeight';
     const FloatingActionButton = 'FloatingActionButton';
     const ImageAsset = 'ImageAsset';

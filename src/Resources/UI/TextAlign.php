@@ -11,7 +11,9 @@ class TextAlign extends UI
     const center = 'center';
 
     const justify = 'justify';
+
     const start = 'start';
+
     const end = 'end';
 
     public static function left(): TextAlign

@@ -7,9 +7,13 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 class NavigationPath extends Path
 {
     protected ?string $navigatorKey = null;
+
     protected ?string $stackKey = null;
+
     protected ?int $index = null;
+
     protected ?array $queryParameters = null;
+
     protected ?array $pathParameters = null;
 
     public function setNavigatorKey($navigatorKey)
@@ -18,7 +22,7 @@ class NavigationPath extends Path
 
         return $this;
     }
-    
+
     public function setStackKey($stackKey)
     {
         $this->stackKey = $stackKey;
