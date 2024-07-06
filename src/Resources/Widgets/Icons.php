@@ -48,4 +48,19 @@ class Icons
     {
         return (new IconData(0xE09C))->setFontFamily($fontFamily);
     }
+
+    public static function restaurant($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe532))->setFontFamily($fontFamily);
+    }
+
+    public static function local_mall($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe39a))->setFontFamily($fontFamily);
+    }
+
+    public static function person($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe491))->setFontFamily($fontFamily);
+    }
 }
