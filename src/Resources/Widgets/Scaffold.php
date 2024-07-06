@@ -16,9 +16,11 @@ class Scaffold extends StatefulWidget
     protected ?AppBar $appBar;
 
     protected Widget|Json $body;
+
     protected Widget|Json $floatingActionButton;
 
     protected Widget|Json $bottomNavigationBar;
+
     protected FloatingActionButtonLocation $floatingActionButtonLocation;
 
     public function setAppBar(AppBar $appBar): self

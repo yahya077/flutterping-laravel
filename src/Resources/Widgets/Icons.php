@@ -51,16 +51,16 @@ class Icons
 
     public static function restaurant($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe532))->setFontFamily($fontFamily);
+        return (new IconData(0xE532))->setFontFamily($fontFamily);
     }
 
     public static function local_mall($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe39a))->setFontFamily($fontFamily);
+        return (new IconData(0xE39A))->setFontFamily($fontFamily);
     }
 
     public static function person($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe491))->setFontFamily($fontFamily);
+        return (new IconData(0xE491))->setFontFamily($fontFamily);
     }
 }

@@ -7,6 +7,7 @@ use Flutterping\Resources\Json;
 class ScopeValue extends Json
 {
     protected string $id;
+
     protected string $key;
 
     public function __construct(string $id, string $key)
