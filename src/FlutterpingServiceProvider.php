@@ -34,7 +34,7 @@ class FlutterpingServiceProvider extends PackageServiceProvider
 
     protected function registerResponseMacro(): void
     {
-        Response::macro('flutterpingAlert', function (string $alertMessage, string $alertType = 'info') {
+        Response::macro('flutterpingAlert', function (string $stateId, string $alertMessage, string $alertType = 'info') {
             $color = match ($alertType) {
                 'success' => Color::fromRGB(23, 173, 63),
                 'warning' => Color::fromRGB(255, 255, 0),
@@ -42,7 +42,7 @@ class FlutterpingServiceProvider extends PackageServiceProvider
                 default => Color::fromRGB(0, 0, 255),
             };
 
-            return Response::json((new ActionEvent())->setAction((new AlertAction())->setContent((new Text($alertMessage)))->setColor($color))->toArray());
+            return Response::json((new ActionEvent())->setStateId($stateId)->setAction((new AlertAction())->setContent((new Text($alertMessage)))->setColor($color))->toArray());
         });
 
         Response::macro('flutterping', function (Renderable $renderable) {
