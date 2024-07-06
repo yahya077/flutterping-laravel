@@ -7,10 +7,15 @@ use Flutterping\Resources\RenderableProperty;
 class FloatingActionButtonLocation extends RenderableProperty
 {
     const centerFloat = 'centerFloat';
+
     const centerDocked = 'centerDocked';
+
     const endFloat = 'endFloat';
+
     const endDocked = 'endDocked';
+
     const startFloat = 'startFloat';
+
     const startDocked = 'startDocked';
 
     public static function centerFloat(): FloatingActionButtonLocation

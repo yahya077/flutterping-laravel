@@ -123,6 +123,8 @@ class ElementDefinitions
     const BottomAppBar = 'BottomAppBar';
 
     const IntrinsicHeight = 'IntrinsicHeight';
+
     const FloatingActionButton = 'FloatingActionButton';
+
     const ImageAsset = 'ImageAsset';
 }
