@@ -2,9 +2,9 @@
 
 namespace Flutterping\Resources\Action;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-abstract class Action extends Element implements ActionInterface
+abstract class Action extends Json implements ActionInterface
 {
     protected string $type;
 

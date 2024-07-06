@@ -2,18 +2,19 @@
 
 namespace Flutterping\Resources\Page;
 
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Page\Loader\PageLoader;
 use Flutterping\Resources\Widgets\Widget;
 
 abstract class Page extends Widget implements PageInterface
 {
-    protected Widget $child;
+    protected Widget|Json $child;
 
     protected string $stateId;
 
     protected ?PageLoader $pageLoader;
 
-    public function setChild(Widget $child): self
+    public function setChild(Widget|Json $child): self
     {
         $this->child = $child;
 

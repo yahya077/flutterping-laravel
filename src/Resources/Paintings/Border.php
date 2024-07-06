@@ -4,9 +4,9 @@ namespace Flutterping\Resources\Paintings;
 
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class Border extends Element
+class Border extends Json
 {
     public function getType(): string
     {

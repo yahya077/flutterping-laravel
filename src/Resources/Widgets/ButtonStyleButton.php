@@ -3,12 +3,13 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Event\BaseEvent;
+use Flutterping\Resources\Json;
 
 abstract class ButtonStyleButton extends Widget
 {
     protected ?BaseEvent $onPressed;
 
-    protected Widget $child;
+    protected Widget|Json $child;
 
     public function setOnPressed(BaseEvent $onPressed): self
     {
@@ -17,7 +18,7 @@ abstract class ButtonStyleButton extends Widget
         return $this;
     }
 
-    public function setChild(Widget $child): self
+    public function setChild(Widget|Json $child): self
     {
         $this->child = $child;
 

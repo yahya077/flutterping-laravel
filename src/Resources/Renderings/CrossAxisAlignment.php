@@ -3,9 +3,9 @@
 namespace Flutterping\Resources\Renderings;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class CrossAxisAlignment extends Element
+class CrossAxisAlignment extends Json
 {
     public function getType(): string
     {

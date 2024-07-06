@@ -3,9 +3,9 @@
 namespace Flutterping\Resources\Paintings;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class Alignment extends Element
+class Alignment extends Json
 {
     public function getType(): string
     {

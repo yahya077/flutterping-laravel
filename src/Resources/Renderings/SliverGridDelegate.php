@@ -2,6 +2,6 @@
 
 namespace Flutterping\Resources\Renderings;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-abstract class SliverGridDelegate extends Element {}
+abstract class SliverGridDelegate extends Json {}

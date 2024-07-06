@@ -2,16 +2,17 @@
 
 namespace Flutterping\Resources\Action\Traits;
 
+use Flutterping\Resources\Json;
 use Flutterping\Resources\UI\Color;
 use Flutterping\Resources\Widgets\Widget;
 
 trait AlertableAction
 {
-    protected Widget $content;
+    protected Widget|Json $content;
 
     protected ?Color $color;
 
-    public function setContent(Widget $content): self
+    public function setContent(Widget|Json $content): self
     {
         $this->content = $content;
 

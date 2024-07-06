@@ -2,7 +2,7 @@
 
 namespace Flutterping\Resources;
 
-abstract class RouterConfig extends Element
+abstract class RouterConfig extends Json
 {
     protected string $initialRoutePath;
 

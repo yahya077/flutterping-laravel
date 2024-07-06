@@ -2,10 +2,10 @@
 
 namespace Flutterping\Resources\Event;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Scope;
 
-abstract class BaseEvent extends Element implements EventInterface
+abstract class BaseEvent extends Json implements EventInterface
 {
     protected string $name;
 

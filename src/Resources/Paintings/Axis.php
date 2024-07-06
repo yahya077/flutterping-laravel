@@ -3,9 +3,9 @@
 namespace Flutterping\Resources\Paintings;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class Axis extends Element
+class Axis extends Json
 {
     protected string $value;
 

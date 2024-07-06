@@ -2,9 +2,9 @@
 
 namespace Flutterping\Resources\Navigation;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class Path extends Element
+class Path extends Json
 {
     public function __construct(protected string $path = '') {}
 

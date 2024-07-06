@@ -2,9 +2,9 @@
 
 namespace Flutterping\Resources\Foundation;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-abstract class ChangeNotifier extends Element
+abstract class ChangeNotifier extends Json
 {
     protected string $id;
 

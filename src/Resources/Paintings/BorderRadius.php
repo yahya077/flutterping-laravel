@@ -3,9 +3,9 @@
 namespace Flutterping\Resources\Paintings;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class BorderRadius extends Element
+class BorderRadius extends Json
 {
     public function getType(): string
     {

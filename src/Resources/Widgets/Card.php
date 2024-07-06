@@ -4,13 +4,14 @@ namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\EdgeInsetsMargin;
 use Flutterping\Resources\Paintings\ShapeBorder;
 use Flutterping\Resources\UI\Clip;
 
 class Card extends Widget
 {
-    protected Widget $child;
+    protected Widget|Json $child;
 
     protected ColorInterface $color;
 
@@ -35,7 +36,7 @@ class Card extends Widget
         return ElementDefinitions::Card;
     }
 
-    public function setChild(Widget $child): Card
+    public function setChild(Widget|Json $child): Card
     {
         $this->child = $child;
 

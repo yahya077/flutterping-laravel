@@ -3,6 +3,7 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 
 class IntrinsicHeight extends Widget
 {
@@ -11,9 +12,9 @@ class IntrinsicHeight extends Widget
         return ElementDefinitions::IntrinsicHeight;
     }
 
-    protected Widget $child;
+    protected Widget|Json $child;
 
-    public function setChild(Widget $child): IntrinsicHeight
+    public function setChild(Widget|Json $child): IntrinsicHeight
     {
         $this->child = $child;
 

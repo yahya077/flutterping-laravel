@@ -3,6 +3,7 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 
 class Form extends Widget
 {
@@ -32,7 +33,7 @@ class Form extends Widget
         return $this;
     }
 
-    public function addFormWidget(Widget $formWidget): self
+    public function addFormWidget(Widget|Json $formWidget): self
     {
         $this->formWidgets[] = $formWidget;
 

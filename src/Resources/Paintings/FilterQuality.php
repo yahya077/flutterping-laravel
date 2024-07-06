@@ -3,9 +3,9 @@
 namespace Flutterping\Resources\Paintings;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class FilterQuality extends Element
+class FilterQuality extends Json
 {
     public function getType(): string
     {

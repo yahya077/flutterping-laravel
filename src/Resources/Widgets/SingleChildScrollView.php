@@ -4,6 +4,7 @@ namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Foundation\ScrollController;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\Axis;
 
 class SingleChildScrollView extends Widget
@@ -17,7 +18,7 @@ class SingleChildScrollView extends Widget
 
     protected bool $reverse;
 
-    protected Widget $child;
+    protected Widget|Json $child;
 
     protected ScrollController $controller;
 
@@ -35,7 +36,7 @@ class SingleChildScrollView extends Widget
         return $this;
     }
 
-    public function setChild(Widget $child): SingleChildScrollView
+    public function setChild(Widget|Json $child): SingleChildScrollView
     {
         $this->child = $child;
 

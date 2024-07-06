@@ -3,11 +3,12 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\ReactiveWidgetState;
 
 class ReactiveWidget extends Widget
 {
-    protected Widget $initialWidget;
+    protected Widget|Json $initialWidget;
 
     protected string $stateId;
 
@@ -15,7 +16,7 @@ class ReactiveWidget extends Widget
 
     protected ReactiveWidgetState $state;
 
-    public function setInitialWidget(Widget $initialWidget): ReactiveWidget
+    public function setInitialWidget(Widget|Json $initialWidget): ReactiveWidget
     {
         $this->initialWidget = $initialWidget;
 

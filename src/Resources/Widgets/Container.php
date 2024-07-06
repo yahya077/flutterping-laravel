@@ -3,6 +3,7 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\BoxDecoration;
 use Flutterping\Resources\Paintings\EdgeInsetsGeometry;
 use Flutterping\Resources\UI\Color;
@@ -26,7 +27,7 @@ class Container extends Widget
 
     protected ?float $height = null;
 
-    protected Widget $child;
+    protected Widget|Json $child;
 
     public function setColor(Color $color): self
     {
@@ -70,7 +71,7 @@ class Container extends Widget
         return $this;
     }
 
-    public function setChild(Widget $child): self
+    public function setChild(Widget|Json $child): self
     {
         $this->child = $child;
 

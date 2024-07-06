@@ -3,6 +3,7 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\UI\Color;
 
 class AppBar extends PreferredSizeWidget
@@ -12,9 +13,9 @@ class AppBar extends PreferredSizeWidget
         return ElementDefinitions::AppBar;
     }
 
-    protected ?Widget $title;
+    protected Widget|Json $title;
 
-    protected ?Widget $leading;
+    protected Widget|Json $leading;
 
     protected array|Widget|null $actions;
 
@@ -24,14 +25,14 @@ class AppBar extends PreferredSizeWidget
 
     protected ?bool $centerTitle = false;
 
-    public function setTitle(Widget $title): self
+    public function setTitle(Widget|Json $title): self
     {
         $this->title = $title;
 
         return $this;
     }
 
-    public function setLeading(Widget $leading): self
+    public function setLeading(Widget|Json $leading): self
     {
         $this->leading = $leading;
 

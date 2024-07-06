@@ -2,9 +2,9 @@
 
 namespace Flutterping\Resources\Navigation;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-abstract class StackedRoute extends Element implements RouteInterface
+abstract class StackedRoute extends Json implements RouteInterface
 {
     protected int $stackIndex = 0;
 

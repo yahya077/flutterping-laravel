@@ -4,6 +4,7 @@ namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\EdgeInsetsPadding;
 use Flutterping\Resources\UI\Clip;
 
@@ -14,7 +15,7 @@ class BottomAppBar extends Widget
         return ElementDefinitions::BottomAppBar;
     }
 
-    protected Widget $child;
+    protected Widget|Json $child;
 
     protected ColorInterface $color;
 
@@ -32,7 +33,7 @@ class BottomAppBar extends Widget
 
     protected float $height;
 
-    public function setChild(Widget $child): BottomAppBar
+    public function setChild(Widget|Json $child): BottomAppBar
     {
         $this->child = $child;
 

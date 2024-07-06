@@ -5,11 +5,12 @@ namespace Flutterping\Resources\Widgets;
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Event\ActionEvent;
+use Flutterping\Resources\Json;
 
 class FloatingActionButton extends Widget
 {
     protected ActionEvent $onPressed;
-    protected Widget $child;
+    protected Widget|Json $child;
     protected ColorInterface $backgroundColor;
     protected ColorInterface $focusColor;
     protected ColorInterface $hoverColor;
@@ -31,7 +32,7 @@ class FloatingActionButton extends Widget
         return $this;
     }
 
-    public function setChild(Widget $child): FloatingActionButton
+    public function setChild(Widget|Json $child): FloatingActionButton
     {
         $this->child = $child;
         return $this;

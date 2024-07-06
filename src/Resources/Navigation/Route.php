@@ -2,9 +2,9 @@
 
 namespace Flutterping\Resources\Navigation;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-abstract class Route extends Element implements RouteInterface
+abstract class Route extends Json implements RouteInterface
 {
     protected string $stateId;
 

@@ -3,6 +3,7 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\UI\FloatingActionButtonLocation;
 
 class Scaffold extends StatefulWidget
@@ -14,10 +15,10 @@ class Scaffold extends StatefulWidget
 
     protected ?AppBar $appBar;
 
-    protected ?Widget $body;
-    protected ?Widget $floatingActionButton;
+    protected Widget|Json $body;
+    protected Widget|Json $floatingActionButton;
 
-    protected ?Widget $bottomNavigationBar;
+    protected Widget|Json $bottomNavigationBar;
     protected FloatingActionButtonLocation $floatingActionButtonLocation;
 
     public function setAppBar(AppBar $appBar): self
@@ -27,21 +28,21 @@ class Scaffold extends StatefulWidget
         return $this;
     }
 
-    public function setBody(Widget $body): self
+    public function setBody(Widget|Json $body): self
     {
         $this->body = $body;
 
         return $this;
     }
 
-    public function setBottomNavigationBar(Widget $bottomNavigationBar): self
+    public function setBottomNavigationBar(Widget|Json $bottomNavigationBar): self
     {
         $this->bottomNavigationBar = $bottomNavigationBar;
 
         return $this;
     }
 
-    public function setFloatingActionButton(Widget $floatingActionButton): self
+    public function setFloatingActionButton(Widget|Json $floatingActionButton): self
     {
         $this->floatingActionButton = $floatingActionButton;
 

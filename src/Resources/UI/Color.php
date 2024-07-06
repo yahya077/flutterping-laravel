@@ -4,9 +4,9 @@ namespace Flutterping\Resources\UI;
 
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class Color extends Element implements ColorInterface
+class Color extends Json implements ColorInterface
 {
     public function getType(): string
     {

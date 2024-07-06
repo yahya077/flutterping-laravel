@@ -3,12 +3,13 @@
 namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
+use Flutterping\Resources\Json;
 
 class StatelessWidget extends Widget
 {
     protected string $stateId;
 
-    protected Widget $child;
+    protected Widget|Json $child;
 
     public function setStateId(string $stateId): self
     {
@@ -17,7 +18,7 @@ class StatelessWidget extends Widget
         return $this;
     }
 
-    public function setChild(Widget $child): self
+    public function setChild(Widget|Json $child): self
     {
         $this->child = $child;
 

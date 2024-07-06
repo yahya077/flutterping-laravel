@@ -2,6 +2,6 @@
 
 namespace Flutterping\Resources\Paintings;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-abstract class ShapeBorder extends Element {}
+abstract class ShapeBorder extends Json {}

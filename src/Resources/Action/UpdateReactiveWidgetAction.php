@@ -2,15 +2,16 @@
 
 namespace Flutterping\Resources\Action;
 
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Widgets\Widget;
 
 class UpdateReactiveWidgetAction extends Action
 {
-    protected Widget $widget;
+    protected Widget|Json $widget;
 
     protected string $reactiveWidgetId;
 
-    public function setWidget(Widget $widget): self
+    public function setWidget(Widget|Json $widget): self
     {
         $this->widget = $widget;
 

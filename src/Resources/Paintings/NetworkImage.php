@@ -4,9 +4,9 @@ namespace Flutterping\Resources\Paintings;
 
 use Flutterping\Resources\Contracts\ImageInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class NetworkImage extends Element implements ImageInterface
+class NetworkImage extends Json implements ImageInterface
 {
     public function getType(): string
     {

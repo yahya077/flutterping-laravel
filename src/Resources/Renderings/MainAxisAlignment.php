@@ -3,9 +3,9 @@
 namespace Flutterping\Resources\Renderings;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-class MainAxisAlignment extends Element
+class MainAxisAlignment extends Json
 {
     public function getType(): string
     {

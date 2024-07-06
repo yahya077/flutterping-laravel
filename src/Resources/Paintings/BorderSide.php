@@ -3,10 +3,10 @@
 namespace Flutterping\Resources\Paintings;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\UI\Color;
 
-class BorderSide extends Element
+class BorderSide extends Json
 {
     public function getType(): string
     {

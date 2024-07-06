@@ -2,9 +2,9 @@
 
 namespace Flutterping\Resources\Paintings;
 
-use Flutterping\Resources\Element;
+use Flutterping\Resources\Json;
 
-abstract class EdgeInsetsGeometry extends Element
+abstract class EdgeInsetsGeometry extends Json
 {
     public ?float $left;
 

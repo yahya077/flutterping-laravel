@@ -6,14 +6,14 @@ use Flutterping\Resources\AbstractBottomNavigationBar;
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Event\BaseEvent;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\TextStyle;
-use Flutterping\Resources\Value;
 
 class BottomNavigationBar extends AbstractBottomNavigationBar
 {
     protected array|BottomNavigationBarItem $items;
 
-    protected Value $currentIndex;
+    protected Json $currentIndex;
 
     protected string $stackKey;
 
@@ -52,7 +52,7 @@ class BottomNavigationBar extends AbstractBottomNavigationBar
         return $this;
     }
 
-    public function setCurrentIndex(Value $currentIndex): self
+    public function setCurrentIndex(Json $currentIndex): self
     {
         $this->currentIndex = $currentIndex;
 

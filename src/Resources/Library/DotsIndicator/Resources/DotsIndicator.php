@@ -3,15 +3,15 @@
 namespace Flutterping\Resources\Library\DotsIndicator\Resources;
 
 use Flutterping\Resources\Event\BaseEvent;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Library\DotsIndicator\Definitions\TypeDefinitions;
-use Flutterping\Resources\Value;
 use Flutterping\Resources\Widgets\Widget;
 
 class DotsIndicator extends Widget
 {
     protected int $dotsCount;
 
-    protected Value $position;
+    protected Json $position;
 
     protected bool $reversed;
 
@@ -24,7 +24,7 @@ class DotsIndicator extends Widget
         return $this;
     }
 
-    public function setPosition(Value $position): self
+    public function setPosition(Json $position): self
     {
         $this->position = $position;
 

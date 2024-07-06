@@ -3,6 +3,7 @@
 namespace Flutterping\Resources\Material;
 
 use Flutterping\Resources\Contracts\ColorInterface;
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\EdgeInsetsPadding;
 use Flutterping\Resources\Paintings\TextStyle;
 use Flutterping\Resources\Renderable;
@@ -13,11 +14,11 @@ use Flutterping\Resources\Widgets\Widget;
 
 class InputDecoration extends Renderable
 {
-    protected Widget $icon;
+    protected Widget|Json $icon;
 
     protected ColorInterface $color;
 
-    protected Widget $label;
+    protected Widget|Json $label;
 
     protected string $labelText;
 
@@ -39,7 +40,7 @@ class InputDecoration extends Renderable
 
     protected int $hintMaxLines;
 
-    protected Widget $error;
+    protected Widget|Json $error;
 
     protected string $errorText;
 
@@ -47,7 +48,7 @@ class InputDecoration extends Renderable
 
     protected int $errorMaxLines;
 
-    protected Widget $prefix;
+    protected Widget|Json $prefix;
 
     protected FloatingLabelBehavior $floatingLabelBehavior;
 
@@ -59,7 +60,7 @@ class InputDecoration extends Renderable
 
     protected bool $isCollapsed;
 
-    protected Widget $prefixIcon;
+    protected Widget|Json $prefixIcon;
 
     protected BoxConstraints $prefixIconConstraints;
 
@@ -69,9 +70,9 @@ class InputDecoration extends Renderable
 
     protected ColorInterface $prefixIconColor;
 
-    protected Widget $suffixIcon;
+    protected Widget|Json $suffixIcon;
 
-    protected Widget $suffix;
+    protected Widget|Json $suffix;
 
     protected string $suffixText;
 
@@ -81,7 +82,7 @@ class InputDecoration extends Renderable
 
     protected BoxConstraints $suffixIconConstraints;
 
-    protected Widget $counter;
+    protected Widget|Json $counter;
 
     protected TextStyle $counterStyle;
 
@@ -113,7 +114,7 @@ class InputDecoration extends Renderable
 
     protected BoxConstraints $constraints;
 
-    public function setIcon(Widget $icon): self
+    public function setIcon(Widget|Json $icon): self
     {
         $this->icon = $icon;
 
@@ -127,7 +128,7 @@ class InputDecoration extends Renderable
         return $this;
     }
 
-    public function setLabel(Widget $label): self
+    public function setLabel(Widget|Json $label): self
     {
         $this->label = $label;
 
@@ -204,7 +205,7 @@ class InputDecoration extends Renderable
         return $this;
     }
 
-    public function setError(Widget $error): self
+    public function setError(Widget|Json $error): self
     {
         $this->error = $error;
 
@@ -232,7 +233,7 @@ class InputDecoration extends Renderable
         return $this;
     }
 
-    public function setPrefix(Widget $prefix): self
+    public function setPrefix(Widget|Json $prefix): self
     {
         $this->prefix = $prefix;
 
@@ -274,7 +275,7 @@ class InputDecoration extends Renderable
         return $this;
     }
 
-    public function setPrefixIcon(Widget $prefixIcon): self
+    public function setPrefixIcon(Widget|Json $prefixIcon): self
     {
         $this->prefixIcon = $prefixIcon;
 
@@ -309,14 +310,14 @@ class InputDecoration extends Renderable
         return $this;
     }
 
-    public function setSuffixIcon(Widget $suffixIcon): self
+    public function setSuffixIcon(Widget|Json $suffixIcon): self
     {
         $this->suffixIcon = $suffixIcon;
 
         return $this;
     }
 
-    public function setSuffix(Widget $suffix): self
+    public function setSuffix(Widget|Json $suffix): self
     {
         $this->suffix = $suffix;
 
@@ -351,7 +352,7 @@ class InputDecoration extends Renderable
         return $this;
     }
 
-    public function setCounter(Widget $counter): self
+    public function setCounter(Widget|Json $counter): self
     {
         $this->counter = $counter;
 

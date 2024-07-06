@@ -2,7 +2,7 @@
 
 namespace Flutterping\Resources\Action;
 
-use Flutterping\Resources\Value;
+use Flutterping\Resources\Json;
 
 class FunctionCallAction extends Action
 {
@@ -13,7 +13,7 @@ class FunctionCallAction extends Action
     protected string $scopeId;
 
     /**
-     * @var array<string, Value>
+     * @var array<string, Json>
      */
     protected array $arguments;
 
@@ -32,7 +32,7 @@ class FunctionCallAction extends Action
     }
 
     /**
-     * @param  array<string, Value>  $arguments
+     * @param  array<string, Json>  $arguments
      */
     public function setArguments(array $arguments): self
     {
