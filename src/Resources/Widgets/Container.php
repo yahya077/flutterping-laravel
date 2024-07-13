@@ -2,6 +2,7 @@
 
 namespace Flutterping\Resources\Widgets;
 
+use Flutterping\Resources\Core\CoreDouble;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\BoxDecoration;
@@ -23,9 +24,9 @@ class Container extends Widget
 
     protected ?EdgeInsetsGeometry $padding = null;
 
-    protected ?float $width = null;
+    protected CoreDouble $width;
 
-    protected ?float $height = null;
+    protected CoreDouble $height;
 
     protected Widget|Json $child;
 
@@ -57,14 +58,14 @@ class Container extends Widget
         return $this;
     }
 
-    public function setWidth(float $width): self
+    public function setWidth(CoreDouble $width): self
     {
         $this->width = $width;
 
         return $this;
     }
 
-    public function setHeight(float $height): self
+    public function setHeight(CoreDouble $height): self
     {
         $this->height = $height;
 

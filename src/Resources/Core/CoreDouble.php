@@ -10,7 +10,7 @@ class CoreDouble extends Renderable
         protected mixed $value
     ) {
         if (! in_array($this->value, self::values)) {
-            if (! is_float($this->value)) {
+            if (! is_numeric($this->value)) {
                 throw new \InvalidArgumentException('Invalid value for Double');
             }
         }

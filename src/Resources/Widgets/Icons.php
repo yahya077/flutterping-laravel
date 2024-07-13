@@ -63,4 +63,84 @@ class Icons
     {
         return (new IconData(0xE491))->setFontFamily($fontFamily);
     }
+
+    public static function delete($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe1b9))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe8b8))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf697))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xefaa))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_forever($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe1ba))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_forever_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe8b6))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_forever_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf695))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_forever_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xefa8))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_outline($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe1bb))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_outline_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe8b7))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_outline_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf696))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_outline_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xefa9))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_sweep($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe1bc))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_sweep_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe8b9))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_sweep_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf698))->setFontFamily($fontFamily);
+    }
+
+    public static function delete_sweep_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xefab))->setFontFamily($fontFamily);
+    }
 }
