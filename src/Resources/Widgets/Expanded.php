@@ -8,6 +8,7 @@ use Flutterping\Resources\Json;
 class Expanded extends Widget
 {
     protected Widget|Json $child;
+
     protected int $flex;
 
     public function setChild(Widget|Json $child): self

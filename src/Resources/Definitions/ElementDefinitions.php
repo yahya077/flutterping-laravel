@@ -127,5 +127,6 @@ class ElementDefinitions
     const FloatingActionButton = 'FloatingActionButton';
 
     const ImageAsset = 'ImageAsset';
+
     const Expanded = 'Expanded';
 }
