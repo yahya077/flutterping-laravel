@@ -13,7 +13,7 @@ class Scaffold extends StatefulWidget
         return ElementDefinitions::Scaffold;
     }
 
-    protected ?AppBar $appBar;
+    protected AppBar|Json $appBar;
 
     protected Widget|Json $body;
 
@@ -23,7 +23,7 @@ class Scaffold extends StatefulWidget
 
     protected FloatingActionButtonLocation $floatingActionButtonLocation;
 
-    public function setAppBar(AppBar $appBar): self
+    public function setAppBar(AppBar|Json $appBar): self
     {
         $this->appBar = $appBar;
 

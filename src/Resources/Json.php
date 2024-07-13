@@ -2,9 +2,9 @@
 
 namespace Flutterping\Resources;
 
-use Flutterping\Resources\Contracts\ElementInterface;
+use Flutterping\Resources\Contracts\JsonInterface;
 
-abstract class Json extends Renderable implements ElementInterface
+abstract class Json extends Renderable implements JsonInterface
 {
     abstract public function getType(): string;
 
