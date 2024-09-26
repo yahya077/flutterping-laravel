@@ -11,12 +11,19 @@ use Flutterping\Resources\Widgets\Widget;
 class SvgPictureAsset extends Widget
 {
     protected string $assetName;
+
     protected CoreDouble $width;
+
     protected CoreDouble $height;
+
     protected Alignment $alignment;
+
     protected BoxFit $fit;
+
     protected bool $matchTextDirection;
+
     protected bool $allowDrawingOutsideViewBox;
+
     protected bool $excludeFromSemantics;
 
     public function __construct(string $assetName)

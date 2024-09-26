@@ -125,6 +125,7 @@ class ElementDefinitions
     const FloatingActionButton = 'FloatingActionButton';
 
     const ImageAsset = 'ImageAsset';
+
     const Expanded = 'Expanded';
     const Visibility = 'Visibility';
     const Padding = 'Padding';
