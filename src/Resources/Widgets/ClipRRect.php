@@ -15,7 +15,9 @@ class ClipRRect extends Widget
     }
 
     protected BorderRadius|Json $borderRadius;
+
     protected Clip|Json $clipBehavior;
+
     protected Widget|Json $child;
 
     public function setBorderRadius(BorderRadius|Json $borderRadius): self

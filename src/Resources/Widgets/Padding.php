@@ -14,6 +14,7 @@ class Padding extends Widget
     }
 
     protected EdgeInsetsPadding|Json $padding;
+
     protected Widget|Json $child;
 
     public function setPadding(EdgeInsetsPadding|Json $padding): self

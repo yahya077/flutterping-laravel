@@ -18,6 +18,7 @@ class GoRoute extends Route
     protected ?string $path;
 
     protected PageInterface|Json $page;
+
     protected ?string $parentNavigatorKey;
 
     protected ?string $redirect;

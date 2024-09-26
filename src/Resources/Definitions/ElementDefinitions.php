@@ -127,7 +127,10 @@ class ElementDefinitions
     const ImageAsset = 'ImageAsset';
 
     const Expanded = 'Expanded';
+
     const Visibility = 'Visibility';
+
     const Padding = 'Padding';
+
     const ClipRRect = 'ClipRRect';
 }

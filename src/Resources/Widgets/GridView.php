@@ -71,7 +71,7 @@ class GridView extends Widget
     public static function builder(int $itemCount, SliverGridDelegate $gridDelegate, callable $itemBuilder, $scrollController = null, $scrollDirection = null, $reverse = null, $shrinkWrap = null): GridView
     {
 
-        $gridView = new GridView();
+        $gridView = new GridView;
         $gridView->setScrollDirection($scrollDirection ?? Axis::vertical());
         $gridView->setReverse($reverse ?? false);
         $gridView->setShrinkWrap($shrinkWrap ?? false);
