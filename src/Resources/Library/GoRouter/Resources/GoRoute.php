@@ -2,6 +2,7 @@
 
 namespace Flutterping\Resources\Library\GoRouter\Resources;
 
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Library\GoRouter\Definitions\TypeDefinitions;
 use Flutterping\Resources\Page\PageInterface;
 
@@ -16,8 +17,7 @@ class GoRoute extends Route
 
     protected ?string $path;
 
-    protected PageInterface $page;
-
+    protected PageInterface|Json $page;
     protected ?string $parentNavigatorKey;
 
     protected ?string $redirect;
@@ -38,7 +38,7 @@ class GoRoute extends Route
         return $this;
     }
 
-    public function setPage(PageInterface $page): self
+    public function setPage(PageInterface|Json $page): self
     {
         $this->page = $page;
 

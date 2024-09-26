@@ -5,14 +5,10 @@ namespace Flutterping\Resources\UI;
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\Renderable;
 
-class Color extends Json implements ColorInterface
+class Color extends Renderable implements ColorInterface
 {
-    public function getType(): string
-    {
-        return ElementDefinitions::Color;
-    }
-
     protected int $red;
 
     protected int $green;

@@ -2,16 +2,10 @@
 
 namespace Flutterping\Resources\Paintings;
 
-use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Json;
+use Flutterping\Resources\RenderableProperty;
 
-class BoxFit extends Json
+class BoxFit extends RenderableProperty
 {
-    public function getType(): string
-    {
-        return ElementDefinitions::BoxFit;
-    }
-
     const fill = 'fill';
 
     const contain = 'contain';
@@ -25,24 +19,6 @@ class BoxFit extends Json
     const none = 'none';
 
     const scaleDown = 'scaleDown';
-
-    public const values = [
-        self::fill,
-        self::contain,
-        self::cover,
-        self::fitWidth,
-        self::fitHeight,
-        self::none,
-        self::scaleDown,
-    ];
-
-    public function __construct(
-        protected string $value
-    ) {
-        if (! in_array($this->value, self::values)) {
-            throw new \InvalidArgumentException('Invalid value for BoxFit');
-        }
-    }
 
     public static function fill(): BoxFit
     {
@@ -77,10 +53,5 @@ class BoxFit extends Json
     public static function scaleDown(): BoxFit
     {
         return new static(self::scaleDown);
-    }
-
-    public function setValue(string $value): void
-    {
-        $this->value = $value;
     }
 }

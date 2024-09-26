@@ -30,8 +30,6 @@ class ElementDefinitions
 
     const BoxDecoration = 'BoxDecoration';
 
-    const BoxFit = 'BoxFit';
-
     const Alignment = 'Alignment';
 
     const Repeat = 'Repeat';
@@ -128,4 +126,7 @@ class ElementDefinitions
 
     const ImageAsset = 'ImageAsset';
     const Expanded = 'Expanded';
+    const Visibility = 'Visibility';
+    const Padding = 'Padding';
+    const ClipRRect = 'ClipRRect';
 }

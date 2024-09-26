@@ -2,6 +2,7 @@
 
 namespace Flutterping\Resources\Library\GoRouter\Resources;
 
+use Flutterping\Resources\Json;
 use Flutterping\Resources\Library\GoRouter\Definitions\TypeDefinitions;
 use Flutterping\Resources\Navigation\NestedRouteBase;
 use Flutterping\Resources\Page\PageInterface;
@@ -17,7 +18,7 @@ class StatefulShellRouteWithIndexedStack extends NestedRouteBase
 
     protected array|StatefulShellBranchInterface $branches;
 
-    protected PageInterface $wrapperPage;
+    protected PageInterface|Json $wrapperPage;
 
     public function setParentNavigatorKey(string $parentNavigatorKey): self
     {
@@ -33,7 +34,7 @@ class StatefulShellRouteWithIndexedStack extends NestedRouteBase
         return $this;
     }
 
-    public function setWrapperPage(PageInterface $wrapperPage): self
+    public function setWrapperPage(PageInterface|Json $wrapperPage): self
     {
         $this->wrapperPage = $wrapperPage;
 

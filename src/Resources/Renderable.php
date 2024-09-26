@@ -32,9 +32,4 @@ abstract class Renderable implements \JsonSerializable
     {
         return $this->toArray();
     }
-
-    public static function make($data): static
-    {
-        return new static($data);
-    }
 }
