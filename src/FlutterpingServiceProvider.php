@@ -42,7 +42,7 @@ class FlutterpingServiceProvider extends PackageServiceProvider
                 default => Color::fromRGB(0, 0, 255),
             };
 
-            return Response::json((new ActionEvent())->setStateId($stateId)->setAction((new AlertAction())->setContent((new Text($alertMessage)))->setColor($color))->toArray());
+            return Response::json((new ActionEvent)->setStateId($stateId)->setAction((new AlertAction)->setContent((new Text($alertMessage)))->setColor($color))->toArray());
         });
 
         Response::macro('flutterping', function (Renderable $renderable) {

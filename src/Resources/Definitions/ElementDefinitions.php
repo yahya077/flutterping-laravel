@@ -80,7 +80,6 @@ class ElementDefinitions
     const ElevatedButton = 'ElevatedButton';
 
     const IconData = 'IconData';
-    const Icon = 'Icon';
 
     const BottomNavigationBar = 'BottomNavigationBar';
 
@@ -129,9 +128,12 @@ class ElementDefinitions
     const ImageAsset = 'ImageAsset';
 
     const Expanded = 'Expanded';
+
     const Visibility = 'Visibility';
     const ValueListenableBuilder = 'ValueListenableBuilder';
+
     const Padding = 'Padding';
+
     const ClipRRect = 'ClipRRect';
     const RadioListTile = 'RadioListTile';
     const PingFormField = 'PingFormField';
