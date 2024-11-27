@@ -35,6 +35,10 @@ class TextFormField extends Widget
     protected bool $autofocus;
 
     protected bool $readOnly;
+    protected bool $expands;
+    protected int $maxLines;
+    protected int $maxLength;
+    protected int $minLines;
 
     public function __construct(string $name, string $formId)
     {
@@ -108,6 +112,34 @@ class TextFormField extends Widget
     public function setReadOnly(bool $readOnly): self
     {
         $this->readOnly = $readOnly;
+
+        return $this;
+    }
+
+    public function setExpands(bool $expands): self
+    {
+        $this->expands = $expands;
+
+        return $this;
+    }
+
+    public function setMaxLines(int $maxLines): self
+    {
+        $this->maxLines = $maxLines;
+
+        return $this;
+    }
+
+    public function setMaxLength(int $maxLength): self
+    {
+        $this->maxLength = $maxLength;
+
+        return $this;
+    }
+
+    public function setMinLines(int $minLines): self
+    {
+        $this->minLines = $minLines;
 
         return $this;
     }

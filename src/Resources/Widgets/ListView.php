@@ -5,6 +5,7 @@ namespace Flutterping\Resources\Widgets;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Foundation\ScrollController;
 use Flutterping\Resources\Paintings\Axis;
+use Illuminate\Database\Eloquent\Collection;
 
 class ListView extends Widget
 {
@@ -71,6 +72,25 @@ class ListView extends Widget
 
         for ($i = 0; $i < $itemCount; $i++) {
             $items[] = $itemBuilder($i);
+        }
+
+        $listView->setItems($items);
+
+        return $listView;
+    }
+
+    public static function collectionBuilder(Collection $collection, callable $itemBuilder, $scrollController = null, $scrollDirection = null, $reverse = null, $shrinkWrap = null): ListView
+    {
+        $listView = new ListView();
+        $listView->setScrollDirection($scrollDirection ?? Axis::vertical());
+        $listView->setReverse($reverse ?? false);
+        $listView->setShrinkWrap($shrinkWrap ?? false);
+        $listView->setController($scrollController);
+
+        $items = [];
+
+        foreach ($collection as $item) {
+            $items[] = $itemBuilder($item);
         }
 
         $listView->setItems($items);

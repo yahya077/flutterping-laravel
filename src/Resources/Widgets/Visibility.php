@@ -4,6 +4,8 @@ namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\Value\AbstractValue;
+use Flutterping\Resources\Value\DynamicValue;
 
 class Visibility extends Widget
 {
@@ -12,11 +14,16 @@ class Visibility extends Widget
         return ElementDefinitions::Visibility;
     }
 
-    protected bool $visible = true;
+    protected AbstractValue $visible;
 
     protected Widget|Json $child;
 
-    public function setVisible(bool $visible): self
+    public function __construct()
+    {
+        $this->visible = new DynamicValue(true);
+    }
+
+    public function setVisible(AbstractValue $visible): self
     {
         $this->visible = $visible;
 

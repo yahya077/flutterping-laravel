@@ -4,10 +4,8 @@ namespace Flutterping\Resources\Value;
 
 use Flutterping\Resources\Json;
 
-class NotifierValue extends Json
+class NotifierValue extends AbstractValue
 {
-    protected string $key;
-
     public function __construct(string $key)
     {
         $this->key = $key;

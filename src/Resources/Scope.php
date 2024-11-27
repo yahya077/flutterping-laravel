@@ -11,9 +11,10 @@ class Scope extends Renderable
      */
     public array $context;
 
-    public function __construct(string $id)
+    public function __construct(string $id, array $context = [])
     {
         $this->id = $id;
+        $this->context = $context;
     }
 
     /**

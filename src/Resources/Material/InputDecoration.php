@@ -3,16 +3,16 @@
 namespace Flutterping\Resources\Material;
 
 use Flutterping\Resources\Contracts\ColorInterface;
+use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\EdgeInsetsPadding;
 use Flutterping\Resources\Paintings\TextStyle;
-use Flutterping\Resources\Renderable;
 use Flutterping\Resources\Renderings\BoxConstraints;
 use Flutterping\Resources\UI\FloatingLabelBehavior;
 use Flutterping\Resources\UI\TextDirection;
 use Flutterping\Resources\Widgets\Widget;
 
-class InputDecoration extends Renderable
+class InputDecoration extends Json
 {
     protected Widget|Json $icon;
 
@@ -462,5 +462,10 @@ class InputDecoration extends Renderable
         $this->constraints = $constraints;
 
         return $this;
+    }
+
+    public function getType(): string
+    {
+        return ElementDefinitions::InputDecoration;
     }
 }

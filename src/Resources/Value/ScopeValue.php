@@ -4,16 +4,11 @@ namespace Flutterping\Resources\Value;
 
 use Flutterping\Resources\Json;
 
-class ScopeValue extends Json
+class ScopeValue extends AbstractValue
 {
-    protected string $id;
-
-    protected string $key;
-
     public function __construct(string $id, string $key)
     {
-        $this->id = $id;
-        $this->key = $key;
+        $this->key = $id.$key;
     }
 
     public function getType(): string

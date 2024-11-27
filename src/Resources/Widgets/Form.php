@@ -7,42 +7,26 @@ use Flutterping\Resources\Json;
 
 class Form extends Widget
 {
-    protected string $id;
+    protected string $key;
 
-    protected string $parentStateId;
 
-    protected array|Widget $formWidgets;
+    protected Widget $child;
 
-    public function __construct(string $id, array $formWidgets = [])
+    public function __construct(string $key)
     {
-        $this->id = $id;
-        $this->formWidgets = $formWidgets;
+        $this->key = $key;
     }
 
-    public function setId(string $id): self
+    public function setKey(string $key): self
     {
-        $this->id = $id;
+        $this->key = $key;
 
         return $this;
     }
 
-    public function setFormWidgets(array $formWidgets): self
+    public function setWidget(Widget $child): self
     {
-        $this->formWidgets = $formWidgets;
-
-        return $this;
-    }
-
-    public function addFormWidget(Widget|Json $formWidget): self
-    {
-        $this->formWidgets[] = $formWidget;
-
-        return $this;
-    }
-
-    public function setParentStateId(string $parentStateId): self
-    {
-        $this->parentStateId = $parentStateId;
+        $this->child = $child;
 
         return $this;
     }

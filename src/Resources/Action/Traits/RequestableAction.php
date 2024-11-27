@@ -4,6 +4,7 @@ namespace Flutterping\Resources\Action\Traits;
 
 use Flutterping\Resources\Action\NetworkRequestAction;
 use Flutterping\Resources\Navigation\ApiPath;
+use Flutterping\Resources\Value\AbstractValue;
 
 trait RequestableAction
 {
@@ -15,7 +16,7 @@ trait RequestableAction
 
     protected array $headers;
 
-    protected array $body;
+    protected AbstractValue $body;
 
     public function setClient(string $client): self
     {
@@ -38,7 +39,7 @@ trait RequestableAction
         return $this;
     }
 
-    public function setBody(array $body): self
+    public function setBody(AbstractValue $body): self
     {
         $this->body = $body;
 

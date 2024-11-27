@@ -2,7 +2,7 @@
 
 namespace Flutterping\Resources\Value;
 
-class StateValue extends AbstractValue
+class EvalValue extends AbstractValue
 {
     public function __construct(string $key)
     {
@@ -11,6 +11,6 @@ class StateValue extends AbstractValue
 
     public function getType(): string
     {
-        return 'StateValue';
+        return 'EvalValue';
     }
 }

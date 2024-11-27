@@ -2,6 +2,7 @@
 
 namespace Flutterping\Resources\Widgets;
 
+use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Json;
 use Flutterping\Resources\UI\FloatingActionButtonLocation;
@@ -20,6 +21,8 @@ class Scaffold extends StatefulWidget
     protected Widget|Json $floatingActionButton;
 
     protected Widget|Json $bottomNavigationBar;
+
+    protected ColorInterface $backgroundColor;
 
     protected FloatingActionButtonLocation $floatingActionButtonLocation;
 
@@ -54,6 +57,13 @@ class Scaffold extends StatefulWidget
     public function setFloatingActionButtonLocation(FloatingActionButtonLocation $floatingActionButtonLocation): self
     {
         $this->floatingActionButtonLocation = $floatingActionButtonLocation;
+
+        return $this;
+    }
+
+    public function setBackgroundColor(ColorInterface $backgroundColor): self
+    {
+        $this->backgroundColor = $backgroundColor;
 
         return $this;
     }

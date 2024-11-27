@@ -49,6 +49,16 @@ class Icons
         return (new IconData(0xE09C))->setFontFamily($fontFamily);
     }
 
+    public static function arrow_back_ios($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe093))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back_ios_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf571))->setFontFamily($fontFamily);
+    }
+
     public static function restaurant($fontFamily = 'MaterialIcons'): IconData
     {
         return (new IconData(0xE532))->setFontFamily($fontFamily);
