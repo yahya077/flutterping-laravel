@@ -13,6 +13,7 @@ class PingFormField extends Widget
     }
 
     protected string $name;
+
     protected string $scopeId;
 
     protected Widget|Json $field;

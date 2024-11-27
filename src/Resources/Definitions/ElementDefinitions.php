@@ -29,6 +29,7 @@ class ElementDefinitions
     const BorderSide = 'BorderSide';
 
     const BoxDecoration = 'BoxDecoration';
+
     const InputDecoration = 'InputDecoration';
 
     const Alignment = 'Alignment';
@@ -130,12 +131,16 @@ class ElementDefinitions
     const Expanded = 'Expanded';
 
     const Visibility = 'Visibility';
+
     const ValueListenableBuilder = 'ValueListenableBuilder';
 
     const Padding = 'Padding';
 
     const ClipRRect = 'ClipRRect';
+
     const RadioListTile = 'RadioListTile';
+
     const PingFormField = 'PingFormField';
+
     const OutlineInputBorder = 'OutlineInputBorder';
 }

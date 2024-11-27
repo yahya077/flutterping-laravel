@@ -7,7 +7,6 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Event\BaseEvent;
 use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\EdgeInsetsGeometry;
-use Flutterping\Resources\Paintings\EdgeInsetsPadding;
 use Flutterping\Resources\Value\AbstractValue;
 
 class RadioListTile extends Widget
@@ -18,19 +17,33 @@ class RadioListTile extends Widget
     }
 
     protected Widget|Json $title;
+
     protected Widget|Json $subtitle;
+
     protected mixed $value;
+
     protected ColorInterface $activeColor;
+
     protected BaseEvent $onChanged;
+
     protected EdgeInsetsGeometry $contentPadding;
+
     protected bool $dense;
+
     protected bool $isThreeLine;
+
     protected Json $secondary;
+
     protected bool $selected;
+
     protected ColorInterface $tileColor;
+
     protected ColorInterface $selectedTileColor;
+
     protected ColorInterface $hoverColor;
+
     protected float $splashRadius;
+
     protected AbstractValue $groupValue;
 
     public function setTitle(Widget|Json $title): self

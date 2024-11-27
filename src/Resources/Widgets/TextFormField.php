@@ -35,9 +35,13 @@ class TextFormField extends Widget
     protected bool $autofocus;
 
     protected bool $readOnly;
+
     protected bool $expands;
+
     protected int $maxLines;
+
     protected int $maxLength;
+
     protected int $minLines;
 
     public function __construct(string $name, string $formId)

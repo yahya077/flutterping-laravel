@@ -4,7 +4,6 @@ namespace Flutterping\Resources\Widgets;
 
 use Flutterping\Resources\Core\CoreDouble;
 use Flutterping\Resources\Definitions\ElementDefinitions;
-use Flutterping\Resources\Paintings\TextStyle;
 use Flutterping\Resources\UI\Color;
 use Flutterping\Resources\UI\TextDirection;
 
@@ -13,13 +12,21 @@ class Icon extends Widget
     protected IconData $icon;
 
     protected CoreDouble $size;
+
     protected CoreDouble $fill;
+
     protected CoreDouble $grade;
+
     protected CoreDouble $opticalSize;
+
     protected CoreDouble $applyTextScaling;
+
     protected CoreDouble $weight;
+
     protected Color $color;
+
     protected string $semanticLabel;
+
     protected TextDirection $textDirection;
 
     public function __construct(IconData $icon)

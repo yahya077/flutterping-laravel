@@ -2,8 +2,6 @@
 
 namespace Flutterping\Resources\Value;
 
-use Flutterping\Resources\Json;
-
 class ScopeValue extends AbstractValue
 {
     public function __construct(string $id, string $key)

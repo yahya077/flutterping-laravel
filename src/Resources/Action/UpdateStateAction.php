@@ -7,6 +7,7 @@ use Flutterping\Resources\Value\AbstractValue;
 class UpdateStateAction extends Action
 {
     protected string $key;
+
     protected AbstractValue $value;
 
     public function getActionType(): string
