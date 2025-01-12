@@ -81,6 +81,8 @@ class ElementDefinitions
 
     const IconData = 'IconData';
 
+    const Icon = 'Icon';
+
     const BottomNavigationBar = 'BottomNavigationBar';
 
     const BottomNavigationBarItem = 'BottomNavigationBarItem';
