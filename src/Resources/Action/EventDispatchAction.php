@@ -11,6 +11,7 @@ class EventDispatchAction extends Action
     protected $name;
 
     protected $payload;
+
     protected ?Scope $scope;
 
     public function __construct(string $stateId, string $name, $payload = '', ?Scope $scope = null)

@@ -7,10 +7,13 @@ use Flutterping\Resources\Widgets\Widget;
 
 class FlutterCreditCard extends Widget
 {
-    protected string $cardNumber = ""; // 0000 0000 0000 0000
-    protected string $expiryDate = "";
-    protected string $cardHolderName = "";
-    protected string $cvvCode = "";
+    protected string $cardNumber = ''; // 0000 0000 0000 0000
+
+    protected string $expiryDate = '';
+
+    protected string $cardHolderName = '';
+
+    protected string $cvvCode = '';
 
     public function setCardNumber(string $cardNumber): self
     {

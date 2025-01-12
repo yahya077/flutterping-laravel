@@ -81,7 +81,7 @@ class ListView extends Widget
 
     public static function collectionBuilder(Collection $collection, callable $itemBuilder, $scrollController = null, $scrollDirection = null, $reverse = null, $shrinkWrap = null): ListView
     {
-        $listView = new ListView();
+        $listView = new ListView;
         $listView->setScrollDirection($scrollDirection ?? Axis::vertical());
         $listView->setReverse($reverse ?? false);
         $listView->setShrinkWrap($shrinkWrap ?? false);

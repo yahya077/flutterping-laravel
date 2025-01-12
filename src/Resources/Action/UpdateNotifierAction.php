@@ -3,7 +3,6 @@
 namespace Flutterping\Resources\Action;
 
 use Flutterping\Resources\Json;
-use Flutterping\Resources\Widgets\Widget;
 
 class UpdateNotifierAction extends Action
 {
