@@ -8,6 +8,8 @@ abstract class Action extends Json implements ActionInterface
 {
     protected string $type;
 
+    protected Action $thenAction;
+
     public function __construct()
     {
         $this->type = $this->getType();
@@ -16,6 +18,13 @@ abstract class Action extends Json implements ActionInterface
     public function getType(): string
     {
         return $this->getActionType();
+    }
+
+    public function then(Action $thenAction): self
+    {
+        $this->thenAction = $thenAction;
+
+        return $this;
     }
 
     abstract public function getActionType(): string;

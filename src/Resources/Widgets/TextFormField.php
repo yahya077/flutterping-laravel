@@ -9,6 +9,7 @@ use Flutterping\Resources\Renderings\TextCapitalization;
 use Flutterping\Resources\Renderings\TextInputAction;
 use Flutterping\Resources\Renderings\TextInputType;
 use Flutterping\Resources\UI\TextDirection;
+use Flutterping\Resources\Validator\Validator;
 
 class TextFormField extends Widget
 {
@@ -43,6 +44,8 @@ class TextFormField extends Widget
     protected int $maxLength;
 
     protected int $minLines;
+
+    protected Validator $validator;
 
     public function __construct(string $name, string $formId)
     {
@@ -144,6 +147,13 @@ class TextFormField extends Widget
     public function setMinLines(int $minLines): self
     {
         $this->minLines = $minLines;
+
+        return $this;
+    }
+
+    public function setValidator(Validator $validator): self
+    {
+        $this->validator = $validator;
 
         return $this;
     }

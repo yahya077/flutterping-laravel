@@ -64,6 +64,8 @@ class ElementDefinitions
 
     const SizedBox = 'SizedBox';
 
+    const FractionallySizedBox = 'FractionallySizedBox';
+
     const EdgeInsetsPadding = 'EdgeInsetsPadding';
 
     const EdgeInsetsMargin = 'EdgeInsetsMargin';
@@ -141,6 +143,7 @@ class ElementDefinitions
     const ClipRRect = 'ClipRRect';
 
     const RadioListTile = 'RadioListTile';
+    const ListTile = 'ListTile';
 
     const PingFormField = 'PingFormField';
 
