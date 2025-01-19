@@ -7,6 +7,7 @@ use Flutterping\Resources\Definitions\ValidatorDefinitions;
 class RangeValidator extends PredefinedValidator
 {
     protected int $min;
+
     protected int $max;
 
     public function __construct(int $min, int $max)

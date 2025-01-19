@@ -17,6 +17,7 @@ class ComposeValidator extends Validator
     {
         $this->validators[] = $validator;
     }
+
     public function getType(): string
     {
         return ValidatorDefinitions::ComposeValidator;
