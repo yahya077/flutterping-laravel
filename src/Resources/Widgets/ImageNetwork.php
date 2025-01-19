@@ -30,9 +30,9 @@ class ImageNetwork extends Widget
 
     protected FilterQuality $filterQuality;
 
-    //protected $loadingBuilder; TODO: Implement this
-    //protected $errorBuilder; TODO: Implement this
-    //protected $frameBuilder; TODO: Implement this
+    // protected $loadingBuilder; TODO: Implement this
+    // protected $errorBuilder; TODO: Implement this
+    // protected $frameBuilder; TODO: Implement this
     protected int $cacheWidth;
 
     protected int $cacheHeight;
