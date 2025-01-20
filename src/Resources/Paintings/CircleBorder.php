@@ -7,6 +7,7 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 class CircleBorder extends ShapeBorder
 {
     protected BorderSide $side;
+
     protected float $eccentricity;
 
     public function setSide(BorderSide $side): self
