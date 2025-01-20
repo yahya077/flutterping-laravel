@@ -9,6 +9,7 @@ use Flutterping\Resources\Widgets\Widget;
 class WebviewFlutter extends Widget
 {
     protected string $url;
+
     protected string $clientName;
 
     protected BaseEvent $onProgress;

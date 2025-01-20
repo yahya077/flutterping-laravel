@@ -8,9 +8,13 @@ use Flutterping\Resources\Widgets\Widget;
 class ModalBottomSheetAction extends Action
 {
     protected bool $enableDrag;
+
     protected bool $showDragHandle;
+
     protected bool $isScrollControlled;
+
     protected bool $useSafeArea;
+
     protected bool $isDismissible;
 
     protected Widget|Json $content;
