@@ -2,6 +2,7 @@
 
 namespace Flutterping\Resources\Widgets;
 
+use Flutterping\Resources\Core\CoreDouble;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Json;
 
@@ -12,13 +13,13 @@ class SizedBox extends Widget
         return ElementDefinitions::SizedBox;
     }
 
-    public $width;
+    public ?CoreDouble $width;
 
-    public $height;
+    public ?CoreDouble $height;
 
     public $child;
 
-    public function __construct($width = null, $height = null)
+    public function __construct(?CoreDouble $width = null, ?CoreDouble $height = null)
     {
         $this->width = $width;
         $this->height = $height;
@@ -33,6 +34,6 @@ class SizedBox extends Widget
 
     public static function shrink()
     {
-        return new SizedBox(0, 0);
+        return new SizedBox(new CoreDouble(0), new CoreDouble(0));
     }
 }

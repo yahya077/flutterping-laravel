@@ -24,4 +24,9 @@ class BorderSide extends Json
 
         return $this;
     }
+
+    public static function none(): self
+    {
+        return new self(Color::transparent(), 0.0);
+    }
 }

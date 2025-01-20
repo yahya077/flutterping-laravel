@@ -42,4 +42,9 @@ class Color extends Renderable implements ColorInterface
     {
         return new self($red, $green, $blue, $alpha);
     }
+
+    public static function transparent(): self
+    {
+        return new self(0, 0, 0, 0);
+    }
 }

@@ -110,6 +110,8 @@ class ElementDefinitions
 
     const TextFormField = 'TextFormField';
 
+    const CheckboxFormField = 'CheckboxFormField';
+
     const Form = 'Form';
 
     const MaterialApp = 'MaterialApp';
@@ -121,6 +123,10 @@ class ElementDefinitions
     const Card = 'Card';
 
     const RoundedRectangleBorder = 'RoundedRectangleBorder';
+
+    const CircleBorder = 'CircleBorder';
+
+    const BeveledRectangleBorder = 'BeveledRectangleBorder';
 
     const ScrollController = 'ScrollController';
 
