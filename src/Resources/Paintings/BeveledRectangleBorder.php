@@ -7,6 +7,7 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 class BeveledRectangleBorder extends ShapeBorder
 {
     protected BorderSide $side;
+
     protected BorderRadius $borderRadius;
 
     public function setSide(BorderSide $side): self
