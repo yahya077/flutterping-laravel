@@ -59,6 +59,11 @@ class CoreDouble extends Renderable
         return new static(self::maxFinite);
     }
 
+    public static function from(int $value)
+    {
+        return new static($value);
+    }
+
     public function jsonSerialize(): mixed
     {
         return $this->value;
