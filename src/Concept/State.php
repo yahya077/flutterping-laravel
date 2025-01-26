@@ -12,12 +12,12 @@ abstract class State extends Renderable
 
     public static function make(): self
     {
-        return new static();
+        return new static;
     }
 
     public static function getName(): string
     {
-        if (!isset(static::$name)) {
+        if (! isset(static::$name)) {
             return (new \ReflectionClass(static::class))->getShortName();
         }
 
@@ -31,7 +31,7 @@ abstract class State extends Renderable
 
     public function toArray(): ?array
     {
-        return (new \Flutterping\Resources\State())
+        return (new \Flutterping\Resources\State)
             ->setName(static::getName())
             ->setActions($this->getActions())
             ->toArray();

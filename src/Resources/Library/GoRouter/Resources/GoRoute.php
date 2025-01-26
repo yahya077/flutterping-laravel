@@ -14,7 +14,7 @@ class GoRoute extends Route
 
     public static function fromPage(Page $page): self
     {
-        return (new self())
+        return (new self)
             ->setPage($page)
             ->setName($page->getRouteName())
             ->setPath($page->getRoutePath())

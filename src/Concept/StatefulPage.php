@@ -40,37 +40,37 @@ abstract class StatefulPage extends Page
 
     public static function updateWidgetAction(Json|Widget $widget): Action
     {
-        return (new UpdateReactiveWidgetAction())
+        return (new UpdateReactiveWidgetAction)
             ->setReactiveWidgetId(static::getStateId())
             ->setWidget($widget);
     }
 
     public static function updateWidgetEvent(Json|Widget $widget): ActionEvent
     {
-        return (new ActionEvent())
+        return (new ActionEvent)
             ->setStateId(static::getStateId())
             ->setAction(static::updateWidgetAction($widget));
     }
 
     public static function getStateEvent(string $state, ?Scope $scope = null): ActionEvent
     {
-        return (new ActionEvent())
+        return (new ActionEvent)
             ->setStateId(static::getStateId())
-            ->setAction((new EventDispatchAction(static::getStateId(), "StateEvent", $state, $scope)));
+            ->setAction((new EventDispatchAction(static::getStateId(), 'StateEvent', $state, $scope)));
     }
 
     public static function getStateAction(string $state): Action
     {
-        return (new EventDispatchAction(static::getStateId(), "StateEvent", $state));
+        return new EventDispatchAction(static::getStateId(), 'StateEvent', $state);
     }
 
     protected function widget(): Json
     {
-        return (new MaterialPage())
+        return (new MaterialPage)
             ->setChild((new ReactiveWidget)
                 ->setParentStateId(static::getParentStateId())
                 ->setStateId(static::getStateId())
-                ->setState((new ReactiveWidgetState())
+                ->setState((new ReactiveWidgetState)
                     ->setInitialStateName($this->getInitialStateName())
                     ->setStates($this->getStates())));
     }

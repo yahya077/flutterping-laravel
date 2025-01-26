@@ -4,7 +4,7 @@ namespace Flutterping\Concept;
 
 use Flutterping\Models\Widget;
 
-//TODO move route related properties to a trait
+// TODO move route related properties to a trait
 abstract class Page extends Widget
 {
     public static string $stateId;
@@ -14,12 +14,14 @@ abstract class Page extends Widget
     public string $routeName;
 
     public string $routePath;
+
     public bool $isRootRoute = false;
+
     public int $routeStackIndex = 0;
 
     public function getRouteStateId(): string
     {
-        if (!isset($this->routeStateId)) {
+        if (! isset($this->routeStateId)) {
             $className = (new \ReflectionClass($this))->getShortName();
             $className = str_replace('Page', '', $className);
             $className .= 'StateId';
@@ -32,7 +34,7 @@ abstract class Page extends Widget
 
     public function getRouteName(): string
     {
-        if (!isset($this->routeName)) {
+        if (! isset($this->routeName)) {
             $className = (new \ReflectionClass($this))->getShortName();
             $className = str_replace('Page', '', $className);
             $className = lcfirst($className);
@@ -44,7 +46,7 @@ abstract class Page extends Widget
 
     public function getRoutePath(): string
     {
-        if (!isset($this->routePath)) {
+        if (! isset($this->routePath)) {
             $className = (new \ReflectionClass($this))->getShortName();
             $className = str_replace('Page', '', $className);
             $className = lcfirst($className);
