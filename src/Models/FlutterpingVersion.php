@@ -15,7 +15,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $changes
  * @property string $name
  * @property string $release_type
- *
  * @property-read string $version
  * @property-read bool $active
  *

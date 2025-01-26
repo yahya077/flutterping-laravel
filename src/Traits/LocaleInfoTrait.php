@@ -5,13 +5,17 @@ namespace Flutterping\Traits;
 trait LocaleInfoTrait
 {
     protected ?string $locale = null;
+
     protected ?string $languageCode = null;
+
     protected ?string $countryCode = null;
+
     protected ?string $timezone = null;
 
     public function setLocale(?string $locale): self
     {
         $this->locale = $locale;
+
         return $this;
     }
 
@@ -23,6 +27,7 @@ trait LocaleInfoTrait
     public function setLanguageCode(?string $languageCode): self
     {
         $this->languageCode = $languageCode;
+
         return $this;
     }
 
@@ -34,6 +39,7 @@ trait LocaleInfoTrait
     public function setCountryCode(?string $countryCode): self
     {
         $this->countryCode = $countryCode;
+
         return $this;
     }
 
@@ -45,6 +51,7 @@ trait LocaleInfoTrait
     public function setTimezone(?string $timezone): self
     {
         $this->timezone = $timezone;
+
         return $this;
     }
 

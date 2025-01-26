@@ -1,7 +1,5 @@
 <?php
 
-use Flutterping\Http\Middleware\HandleFlutterpingRequests;
-
 return [
     'client' => 'app_client',
     'main_navigator_key' => 'main_navigator_key',
@@ -12,7 +10,7 @@ return [
             'middlewares' => [],
             'initialize_controller' => null,
             'initialize_action' => null,
-        ]
+        ],
     ],
-    'excluded_paths' => []
+    'excluded_paths' => [],
 ];

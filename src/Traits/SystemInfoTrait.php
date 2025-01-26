@@ -5,13 +5,17 @@ namespace Flutterping\Traits;
 trait SystemInfoTrait
 {
     protected ?string $systemTheme = null;
+
     protected ?string $connectionType = null;
+
     protected ?string $deepLink = null;
+
     protected ?string $appInstanceId = null;
 
     public function setSystemTheme(?string $systemTheme): self
     {
         $this->systemTheme = $systemTheme;
+
         return $this;
     }
 
@@ -23,6 +27,7 @@ trait SystemInfoTrait
     public function setConnectionType(?string $connectionType): self
     {
         $this->connectionType = $connectionType;
+
         return $this;
     }
 
@@ -34,6 +39,7 @@ trait SystemInfoTrait
     public function setDeepLink(?string $deepLink): self
     {
         $this->deepLink = $deepLink;
+
         return $this;
     }
 
@@ -45,6 +51,7 @@ trait SystemInfoTrait
     public function setAppInstanceId(?string $appInstanceId): self
     {
         $this->appInstanceId = $appInstanceId;
+
         return $this;
     }
 

@@ -5,14 +5,19 @@ namespace Flutterping\Traits;
 trait AppInfoTrait
 {
     protected ?string $appVersion;
+
     protected ?string $appName = null;
+
     protected ?string $packageName = null;
+
     protected ?string $version = null;
+
     protected ?string $buildNumber = null;
 
     public function setAppVersion($appVersion): self
     {
         $this->appVersion = $appVersion;
+
         return $this;
     }
 
@@ -24,6 +29,7 @@ trait AppInfoTrait
     public function setAppName(?string $appName): self
     {
         $this->appName = $appName;
+
         return $this;
     }
 
@@ -35,6 +41,7 @@ trait AppInfoTrait
     public function setPackageName(?string $packageName): self
     {
         $this->packageName = $packageName;
+
         return $this;
     }
 
@@ -46,6 +53,7 @@ trait AppInfoTrait
     public function setVersion(?string $version): self
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -57,6 +65,7 @@ trait AppInfoTrait
     public function setBuildNumber(?string $buildNumber): self
     {
         $this->buildNumber = $buildNumber;
+
         return $this;
     }
 

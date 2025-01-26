@@ -15,7 +15,7 @@ class InitializeController
         event(new InitializeRequestReceived($request, $sessionId));
 
         return response()->json([
-            'session_id' => $sessionId
+            'session_id' => $sessionId,
         ]);
     }
 }

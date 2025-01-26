@@ -10,7 +10,5 @@ class InitializeRequestReceived
 {
     use Dispatchable, SerializesModels;
 
-    public function __construct(public InitializeRequest $request, public string $sessionId)
-    {
-    }
+    public function __construct(public InitializeRequest $request, public string $sessionId) {}
 }
