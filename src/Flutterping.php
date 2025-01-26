@@ -2,24 +2,12 @@
 
 namespace Flutterping;
 
-use Closure;
-use Illuminate\Support\Facades\App;
+use Flutterping\Traits\AppInfoTrait;
+use Flutterping\Traits\DeviceInfoTrait;
+use Flutterping\Traits\LocaleInfoTrait;
+use Flutterping\Traits\SystemInfoTrait;
 
 class Flutterping
 {
-    protected Closure|string|null $appVersion;
-
-    public function appVersion($appVersion): void
-    {
-        $this->appVersion = $appVersion;
-    }
-
-    public function getAppVersion(): string
-    {
-        $appVersion = $this->appVersion instanceof Closure
-            ? App::call($this->appVersion)
-            : $this->appVersion;
-
-        return (string) $appVersion;
-    }
+    use AppInfoTrait, DeviceInfoTrait, LocaleInfoTrait, SystemInfoTrait;
 }

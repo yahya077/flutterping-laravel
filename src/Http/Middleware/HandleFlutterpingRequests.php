@@ -10,17 +10,23 @@ class HandleFlutterpingRequests
 {
     public function handle(Request $request, Closure $next): mixed
     {
-        if (! $request->header('X-FlutterPing')) {
-            return $next($request);
-        }
-
-        Flutterping::appVersion($request->header('X-FlutterPing-AppVersion', '0.0.0'));
-
-        if (is_array(config('flutter-ping.availableAppVersions')) && ! empty(config('flutter-ping.availableAppVersions'))) {
-            if (! in_array(Flutterping::getAppVersion(), config('flutter-ping.availableAppVersions'))) {
-                return response()->json(['message' => 'App version not supported'], 400);
-            }
-        }
+        Flutterping::setAppVersion($request->header('x-flutterping-appversion', '0.0.0'))
+            ->setAppName($request->header('x-flutterping-appname'))
+            ->setPackageName($request->header('x-flutterping-packagename'))
+            ->setVersion($request->header('x-flutterping-version'))
+            ->setBuildNumber($request->header('x-flutterping-buildnumber'))
+            ->setDeviceName($request->header('x-flutterping-devicename'))
+            ->setDeviceModel($request->header('x-flutterping-devicemodel'))
+            ->setOsVersion($request->header('x-flutterping-osversion'))
+            ->setPlatform($request->header('x-flutterping-platform'))
+            ->setLocale($request->header('x-flutterping-locale'))
+            ->setLanguageCode($request->header('x-flutterping-languagecode'))
+            ->setCountryCode($request->header('x-flutterping-countrycode'))
+            ->setTimezone($request->header('x-flutterping-timezone'))
+            ->setSystemTheme($request->header('x-flutterping-systemtheme'))
+            ->setConnectionType($request->header('x-flutterping-connectiontype'))
+            ->setDeepLink($request->header('x-flutterping-deeplink'))
+            ->setAppInstanceId($request->header('x-flutterping-appinstanceid'));
 
         return $next($request);
     }
