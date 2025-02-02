@@ -67,6 +67,7 @@ abstract class StatefulPage extends Page
     protected function widget(): Json
     {
         return (new MaterialPage)
+            ->setFullscreenDialog($this->fullscreenDialog)
             ->setChild((new ReactiveWidget)
                 ->setParentStateId(static::getParentStateId())
                 ->setStateId(static::getStateId())
