@@ -22,6 +22,7 @@ abstract class StatefulPage extends Page
     public bool $fullscreenDialog = false;
 
     protected array $states = [];
+    protected array $pageNotifiers = [];
 
     public static function getParentStateId(): string
     {
@@ -36,6 +37,11 @@ abstract class StatefulPage extends Page
     public function getStates(): array
     {
         return $this->states;
+    }
+
+    public function getPageNotifiers(): array
+    {
+        return $this->pageNotifiers;
     }
 
     public static function updateWidgetAction(Json|Widget $widget): Action
@@ -64,6 +70,11 @@ abstract class StatefulPage extends Page
         return new EventDispatchAction(static::getStateId(), 'StateEvent', $state);
     }
 
+    public static function getStateId(): string
+    {
+        return static::$stateId;
+    }
+
     protected function widget(): Json
     {
         return (new MaterialPage)
@@ -71,6 +82,7 @@ abstract class StatefulPage extends Page
             ->setChild((new ReactiveWidget)
                 ->setParentStateId(static::getParentStateId())
                 ->setStateId(static::getStateId())
+                ->setPageNotifiers($this->getPageNotifiers())
                 ->setState((new ReactiveWidgetState)
                     ->setInitialStateName($this->getInitialStateName())
                     ->setStates($this->getStates())));

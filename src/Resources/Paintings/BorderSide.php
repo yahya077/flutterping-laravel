@@ -4,6 +4,7 @@ namespace Flutterping\Resources\Paintings;
 
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\UI\BorderStyle;
 use Flutterping\Resources\UI\Color;
 
 class BorderSide extends Json
@@ -17,6 +18,8 @@ class BorderSide extends Json
 
     protected float $width;
 
+    protected BorderStyle $style;
+
     public function __construct(Color $color, float $width = 1.0)
     {
         $this->color = $color;
@@ -25,8 +28,15 @@ class BorderSide extends Json
         return $this;
     }
 
+    public function setStyle(BorderStyle $style): self
+    {
+        $this->style = $style;
+
+        return $this;
+    }
+
     public static function none(): self
     {
-        return new self(Color::transparent(), 0.0);
+        return (new self(Color::transparent(), 0.0))->setStyle(BorderStyle::none());
     }
 }

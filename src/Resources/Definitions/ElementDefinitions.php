@@ -112,6 +112,8 @@ class ElementDefinitions
 
     const CheckboxFormField = 'CheckboxFormField';
 
+    const RadioGroupFormField = 'RadioGroupFormField';
+
     const Form = 'Form';
 
     const MaterialApp = 'MaterialApp';

@@ -8,6 +8,7 @@ use Flutterping\Resources\Event\ActionEvent;
 use Flutterping\Resources\Json;
 use Flutterping\Resources\Material\InputDecoration;
 use Flutterping\Resources\Paintings\BorderSide;
+use Flutterping\Resources\Paintings\EdgeInsetsGeometry;
 use Flutterping\Resources\Paintings\ShapeBorder;
 use Flutterping\Resources\Validator\Validator;
 
@@ -24,6 +25,8 @@ class CheckboxFormField extends Widget
     protected InputDecoration $decoration;
 
     protected ActionEvent $onChanged;
+
+    protected EdgeInsetsGeometry $contentPadding;
 
     protected Validator $validator;
 
@@ -42,6 +45,7 @@ class CheckboxFormField extends Widget
     protected bool $autofocus;
 
     protected ShapeBorder $shape;
+    protected ShapeBorder $checkboxShape;
 
     protected BorderSide $side;
 
@@ -140,6 +144,13 @@ class CheckboxFormField extends Widget
         return $this;
     }
 
+    public function setCheckboxShape(ShapeBorder $checkboxShape): self
+    {
+        $this->checkboxShape = $checkboxShape;
+
+        return $this;
+    }
+
     public function setSide(BorderSide $side): self
     {
         $this->side = $side;
@@ -171,6 +182,13 @@ class CheckboxFormField extends Widget
     public function setSubtitle(Widget|Json $subtitle): self
     {
         $this->subtitle = $subtitle;
+
+        return $this;
+    }
+
+    public function setContentPadding(EdgeInsetsGeometry $contentPadding): self
+    {
+        $this->contentPadding = $contentPadding;
 
         return $this;
     }

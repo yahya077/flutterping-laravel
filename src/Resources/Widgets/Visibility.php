@@ -18,6 +18,9 @@ class Visibility extends Widget
 
     protected Widget|Json $child;
 
+    //TODO make conditional widget instead of elseChild
+    protected Widget|Json $elseChild;
+
     public function __construct()
     {
         $this->visible = new DynamicValue(true);
@@ -33,6 +36,13 @@ class Visibility extends Widget
     public function setChild(Widget|Json $child): self
     {
         $this->child = $child;
+
+        return $this;
+    }
+
+    public function setElseChild(Widget|Json $elseChild): self
+    {
+        $this->elseChild = $elseChild;
 
         return $this;
     }
