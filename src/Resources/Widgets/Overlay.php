@@ -17,6 +17,7 @@ class Overlay extends Widget
     public function setChild(Widget|Json $child): self
     {
         $this->child = $child;
+
         return $this;
     }
 }
