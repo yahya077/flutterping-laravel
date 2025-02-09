@@ -45,6 +45,7 @@ class CheckboxFormField extends Widget
     protected bool $autofocus;
 
     protected ShapeBorder $shape;
+
     protected ShapeBorder $checkboxShape;
 
     protected BorderSide $side;
