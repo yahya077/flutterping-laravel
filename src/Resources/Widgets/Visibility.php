@@ -18,7 +18,7 @@ class Visibility extends Widget
 
     protected Widget|Json $child;
 
-    //TODO make conditional widget instead of elseChild
+    // TODO make conditional widget instead of elseChild
     protected Widget|Json $elseChild;
 
     public function __construct()

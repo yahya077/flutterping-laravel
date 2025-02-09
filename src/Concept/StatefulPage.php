@@ -22,6 +22,7 @@ abstract class StatefulPage extends Page
     public bool $fullscreenDialog = false;
 
     protected array $states = [];
+
     protected array $pageNotifiers = [];
 
     public static function getParentStateId(): string

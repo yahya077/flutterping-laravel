@@ -17,5 +17,6 @@ class ValidatorDefinitions
     const RangeValidator = 'RangeValidator';
 
     const ComposeValidator = 'ComposeValidator';
+
     const RegexValidator = 'RegexValidator';
 }
