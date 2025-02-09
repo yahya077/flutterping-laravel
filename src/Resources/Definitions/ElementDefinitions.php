@@ -157,4 +157,6 @@ class ElementDefinitions
     const PingFormField = 'PingFormField';
 
     const OutlineInputBorder = 'OutlineInputBorder';
+
+    const Overlay = 'Overlay';
 }
