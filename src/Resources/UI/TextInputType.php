@@ -1,20 +1,32 @@
 <?php
 
 namespace Flutterping\Resources\UI;
+
 class TextInputType extends UI
 {
-    const text = "text";
-    const multiline = "multiline";
-    const number = "number";
-    const phone = "phone";
-    const datetime = "datetime";
-    const emailAddress = "emailAddress";
-    const url = "url";
-    const visiblePassword = "visiblePassword";
-    const name = "name";
-    const address = "address";
-    const streetAddress = "streetAddress";
-    const none = "none";
+    const text = 'text';
+
+    const multiline = 'multiline';
+
+    const number = 'number';
+
+    const phone = 'phone';
+
+    const datetime = 'datetime';
+
+    const emailAddress = 'emailAddress';
+
+    const url = 'url';
+
+    const visiblePassword = 'visiblePassword';
+
+    const name = 'name';
+
+    const address = 'address';
+
+    const streetAddress = 'streetAddress';
+
+    const none = 'none';
 
     public static function text(): TextInputType
     {
