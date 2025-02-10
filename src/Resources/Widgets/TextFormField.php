@@ -7,8 +7,8 @@ use Flutterping\Resources\Material\InputDecoration;
 use Flutterping\Resources\Paintings\TextStyle;
 use Flutterping\Resources\Renderings\TextCapitalization;
 use Flutterping\Resources\Renderings\TextInputAction;
-use Flutterping\Resources\Renderings\TextInputType;
 use Flutterping\Resources\UI\TextDirection;
+use Flutterping\Resources\UI\TextInputType;
 use Flutterping\Resources\Validator\Validator;
 
 class TextFormField extends Widget

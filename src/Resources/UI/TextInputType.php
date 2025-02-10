@@ -1,45 +1,20 @@
 <?php
 
-namespace Flutterping\Resources\Renderings;
-
-use Flutterping\Resources\Renderable;
-
-class TextInputType extends Renderable
+namespace Flutterping\Resources\UI;
+class TextInputType extends UI
 {
-    const text = 'text';
-
-    const multiline = 'multiline';
-
-    const number = 'number';
-
-    const phone = 'phone';
-
-    const datetime = 'datetime';
-
-    const emailAddress = 'emailAddress';
-
-    const url = 'url';
-
-    const visiblePassword = 'visiblePassword';
-
-    public const values = [
-        self::text,
-        self::multiline,
-        self::number,
-        self::phone,
-        self::datetime,
-        self::emailAddress,
-        self::url,
-        self::visiblePassword,
-    ];
-
-    public function __construct(
-        protected string $value
-    ) {
-        if (! in_array($this->value, self::values)) {
-            throw new \InvalidArgumentException('Invalid value for TextInputType');
-        }
-    }
+    const text = "text";
+    const multiline = "multiline";
+    const number = "number";
+    const phone = "phone";
+    const datetime = "datetime";
+    const emailAddress = "emailAddress";
+    const url = "url";
+    const visiblePassword = "visiblePassword";
+    const name = "name";
+    const address = "address";
+    const streetAddress = "streetAddress";
+    const none = "none";
 
     public static function text(): TextInputType
     {
@@ -79,5 +54,25 @@ class TextInputType extends Renderable
     public static function visiblePassword(): TextInputType
     {
         return new static(self::visiblePassword);
+    }
+
+    public static function name(): TextInputType
+    {
+        return new static(self::name);
+    }
+
+    public static function address(): TextInputType
+    {
+        return new static(self::address);
+    }
+
+    public static function streetAddress(): TextInputType
+    {
+        return new static(self::streetAddress);
+    }
+
+    public static function none(): TextInputType
+    {
+        return new static(self::none);
     }
 }
