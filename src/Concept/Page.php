@@ -25,6 +25,7 @@ abstract class Page extends Widget
             $routeStateId = (new \ReflectionClass(static::class))->getShortName();
             $routeStateId = str_replace('Page', '', $routeStateId);
             $routeStateId .= 'StateId';
+
             return lcfirst($routeStateId);
         }
 
@@ -36,6 +37,7 @@ abstract class Page extends Widget
         if (static::$routeName == null) {
             $routeName = (new \ReflectionClass(static::class))->getShortName();
             $routeName = str_replace('Page', '', $routeName);
+
             return lcfirst($routeName);
         }
 
@@ -47,7 +49,7 @@ abstract class Page extends Widget
         if (static::$routePath == null) {
             $routePath = (new \ReflectionClass(static::class))->getShortName();
             $routePath = str_replace('Page', '', $routePath);
-            $routePath =  lcfirst($routePath);
+            $routePath = lcfirst($routePath);
 
             if (static::$isRootRoute === true) {
                 return sprintf('/%s', $routePath);
