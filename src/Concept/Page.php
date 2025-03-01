@@ -7,62 +7,61 @@ use Flutterping\Models\Widget;
 // TODO move route related properties to a trait
 abstract class Page extends Widget
 {
-    public static string $stateId;
+    protected static ?string $stateId = null;
 
-    public string $routeStateId;
+    protected static ?string $routeStateId = null;
 
-    public string $routeName;
+    protected static ?string $routeName = null;
 
-    public string $routePath;
+    protected static ?string $routePath = null;
 
-    public bool $isRootRoute = false;
+    protected static bool $isRootRoute = false;
 
-    public int $routeStackIndex = 0;
+    protected static int $routeStackIndex = 0;
 
-    public function getRouteStateId(): string
+    public static function getRouteStateId(): string
     {
-        if (! isset($this->routeStateId)) {
-            $className = (new \ReflectionClass($this))->getShortName();
-            $className = str_replace('Page', '', $className);
-            $className .= 'StateId';
-            $className = lcfirst($className);
-            $this->routeStateId = $className;
+        if (! isset(static::$routeStateId)) {
+            $routeStateId = (new \ReflectionClass(static::class))->getShortName();
+            $routeStateId = str_replace('Page', '', $routeStateId);
+            $routeStateId .= 'StateId';
+            return lcfirst($routeStateId);
         }
 
-        return $this->routeStateId;
+        return static::$routeStateId;
     }
 
-    public function getRouteName(): string
+    public static function getRouteName(): string
     {
-        if (! isset($this->routeName)) {
-            $className = (new \ReflectionClass($this))->getShortName();
-            $className = str_replace('Page', '', $className);
-            $className = lcfirst($className);
-            $this->routeName = $className;
+        if (static::$routeName == null) {
+            $routeName = (new \ReflectionClass(static::class))->getShortName();
+            $routeName = str_replace('Page', '', $routeName);
+            return lcfirst($routeName);
         }
 
-        return $this->routeName;
+        return static::$routeName;
     }
 
-    public function getRoutePath(): string
+    public static function getRoutePath(): string
     {
-        if (! isset($this->routePath)) {
-            $className = (new \ReflectionClass($this))->getShortName();
-            $className = str_replace('Page', '', $className);
-            $className = lcfirst($className);
-            $this->routePath = $className;
+        if (static::$routePath == null) {
+            $routePath = (new \ReflectionClass(static::class))->getShortName();
+            $routePath = str_replace('Page', '', $routePath);
+            $routePath =  lcfirst($routePath);
+
+            if (static::$isRootRoute === true) {
+                return sprintf('/%s', $routePath);
+            }
+
+            return $routePath;
         }
 
-        if ($this->isRootRoute === true) {
-            return sprintf('/%s', $this->routePath);
-        }
-
-        return $this->routePath;
+        return static::$routePath;
     }
 
-    public function getRouteStackIndex(): int
+    public static function getRouteStackIndex(): int
     {
-        return $this->routeStackIndex;
+        return static::$routeStackIndex;
     }
 
     public static function getStateId(): string

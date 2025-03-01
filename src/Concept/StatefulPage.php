@@ -17,32 +17,34 @@ abstract class StatefulPage extends Page
 {
     public static string $parentStateId;
 
-    public string $initialStateName;
+    public static string $initialStateName;
 
-    public bool $fullscreenDialog = false;
+    public static bool $fullscreenDialog = false;
 
-    protected array $states = [];
+    protected static array $states = [];
 
-    protected array $pageNotifiers = [];
+    protected static array $pageNotifiers = [];
+
+    protected static ?string $stateId = null;
 
     public static function getParentStateId(): string
     {
         return static::$parentStateId;
     }
 
-    public function getInitialStateName(): string
+    public static function getInitialStateName(): string // Made this method static
     {
-        return $this->initialStateName;
+        return static::$initialStateName;
     }
 
     public function getStates(): array
     {
-        return $this->states;
+        return static::$states;
     }
 
     public function getPageNotifiers(): array
     {
-        return $this->pageNotifiers;
+        return static::$pageNotifiers;
     }
 
     public static function updateWidgetAction(Json|Widget $widget): Action
@@ -79,13 +81,13 @@ abstract class StatefulPage extends Page
     protected function widget(): Json
     {
         return (new MaterialPage)
-            ->setFullscreenDialog($this->fullscreenDialog)
+            ->setFullscreenDialog(static::$fullscreenDialog)
             ->setChild((new ReactiveWidget)
                 ->setParentStateId(static::getParentStateId())
                 ->setStateId(static::getStateId())
                 ->setPageNotifiers($this->getPageNotifiers())
                 ->setState((new ReactiveWidgetState)
-                    ->setInitialStateName($this->getInitialStateName())
+                    ->setInitialStateName(static::getInitialStateName())
                     ->setStates($this->getStates())));
     }
 }

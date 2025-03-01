@@ -8,7 +8,7 @@ abstract class Widget extends Json
 {
     public static function make()
     {
-        return new static;
+        return new static();
     }
 
     abstract protected function widget(): Json;

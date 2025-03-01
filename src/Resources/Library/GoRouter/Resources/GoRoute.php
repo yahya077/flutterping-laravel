@@ -16,8 +16,8 @@ class GoRoute extends Route
     {
         return (new self)
             ->setPage($page)
-            ->setName($page->getRouteName())
-            ->setPath($page->getRoutePath())
-            ->setStateId($page->getRouteStateId());
+            ->setName($page::getRouteName())
+            ->setPath($page::getRoutePath())
+            ->setStateId($page::getRouteStateId());
     }
 }
