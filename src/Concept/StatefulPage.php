@@ -92,7 +92,7 @@ abstract class StatefulPage extends Page
         if (static::getInitialWidget() != null) {
             $reactiveWidget->setInitialWidget(static::getInitialWidget());
         } else {
-            $reactiveWidget->setInitialWidget((new Placeholder()));
+            $reactiveWidget->setInitialWidget((new Placeholder));
         }
 
         return (new MaterialPage)

@@ -63,6 +63,7 @@ class ElementDefinitions
     const FontWeight = 'FontWeight';
 
     const SizedBox = 'SizedBox';
+
     const Placeholder = 'Placeholder';
 
     const FractionallySizedBox = 'FractionallySizedBox';

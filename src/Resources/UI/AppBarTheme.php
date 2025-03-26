@@ -9,9 +9,12 @@ use Flutterping\Resources\Renderable;
 class AppBarTheme extends Renderable
 {
     protected ColorInterface $backgroundColor;
-    protected ColorInterface $foregroundColor;
-    protected bool $centerTitle;
-    protected CoreDouble $elevation;
-    protected ColorInterface $shadowColor;
 
+    protected ColorInterface $foregroundColor;
+
+    protected bool $centerTitle;
+
+    protected CoreDouble $elevation;
+
+    protected ColorInterface $shadowColor;
 }

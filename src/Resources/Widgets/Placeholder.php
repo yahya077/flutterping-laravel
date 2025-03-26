@@ -9,8 +9,11 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 class Placeholder extends Widget
 {
     protected ColorInterface $color;
+
     protected CoreDouble $strokeWidth;
+
     protected CoreDouble $fallbackHeight;
+
     protected CoreDouble $fallbackWidth;
 
     public function setColor(ColorInterface $color): Placeholder

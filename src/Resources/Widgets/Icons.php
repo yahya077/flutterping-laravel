@@ -156,46 +156,46 @@ class Icons
 
     public static function add($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe047))->setFontFamily($fontFamily);
+        return (new IconData(0xE047))->setFontFamily($fontFamily);
     }
 
     public static function add_sharp($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe758))->setFontFamily($fontFamily);
+        return (new IconData(0xE758))->setFontFamily($fontFamily);
     }
 
     public static function add_rounded($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xf537))->setFontFamily($fontFamily);
+        return (new IconData(0xF537))->setFontFamily($fontFamily);
     }
 
     public static function calendar_month($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xf06bb))->setFontFamily($fontFamily);
+        return (new IconData(0xF06BB))->setFontFamily($fontFamily);
     }
 
     public static function calendar_today($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe122))->setFontFamily($fontFamily);
+        return (new IconData(0xE122))->setFontFamily($fontFamily);
     }
 
     public static function calendar_today_outlined($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xef11))->setFontFamily($fontFamily);
+        return (new IconData(0xEF11))->setFontFamily($fontFamily);
     }
 
     public static function cake($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe120))->setFontFamily($fontFamily);
+        return (new IconData(0xE120))->setFontFamily($fontFamily);
     }
 
     public static function cake_sharp($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe81d))->setFontFamily($fontFamily);
+        return (new IconData(0xE81D))->setFontFamily($fontFamily);
     }
 
     public static function cake_outlined($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xef0f))->setFontFamily($fontFamily);
+        return (new IconData(0xEF0F))->setFontFamily($fontFamily);
     }
 }

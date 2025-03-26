@@ -2,8 +2,8 @@
 
 namespace Flutterping\Resources\Library\Localization\Resources;
 
-use Flutterping\Resources\Library\Localization\Definitions\TypeDefinitions;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\Library\Localization\Definitions\TypeDefinitions;
 
 class GlobalWidgetsLocalizations extends Json
 {

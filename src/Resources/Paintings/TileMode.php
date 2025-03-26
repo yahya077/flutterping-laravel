@@ -11,6 +11,7 @@ class TileMode extends RenderableProperty
     const repeat = 'repeat';
 
     const mirror = 'mirror';
+
     const decal = 'decal';
 
     public static function repeat(): TileMode

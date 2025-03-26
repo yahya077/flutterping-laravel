@@ -5,7 +5,6 @@ namespace Flutterping\Http\Middleware;
 use Closure;
 use Flutterping\Facades\Flutterping;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class HandleFlutterpingRequests
 {

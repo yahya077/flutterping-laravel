@@ -17,6 +17,6 @@ abstract class AbstractValue extends Json
 
     public static function fromKey($key): self
     {
-        return (new static())->setKey($key);
+        return (new static)->setKey($key);
     }
 }
