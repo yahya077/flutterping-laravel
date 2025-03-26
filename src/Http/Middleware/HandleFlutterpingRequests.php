@@ -5,6 +5,7 @@ namespace Flutterping\Http\Middleware;
 use Closure;
 use Flutterping\Facades\Flutterping;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class HandleFlutterpingRequests
 {
@@ -27,6 +28,8 @@ class HandleFlutterpingRequests
             ->setConnectionType($request->header('x-flutterping-connectiontype'))
             ->setDeepLink($request->header('x-flutterping-deeplink'))
             ->setAppInstanceId($request->header('x-flutterping-appinstanceid'));
+
+        app()->setLocale($request->header('x-flutterping-languagecode'));
 
         return $next($request);
     }

@@ -19,6 +19,8 @@ abstract class Page extends Widget
 
     protected static int $routeStackIndex = 0;
 
+    protected static string $redirect = '';
+
     public static function getRouteStateId(): string
     {
         if (! isset(static::$routeStateId)) {
@@ -30,6 +32,11 @@ abstract class Page extends Widget
         }
 
         return static::$routeStateId;
+    }
+
+    public static function getRedirect(): ?string
+    {
+        return static::$redirect;
     }
 
     public static function getRouteName(): string
@@ -68,6 +75,14 @@ abstract class Page extends Widget
 
     public static function getStateId(): string
     {
+        if (static::$stateId == null) {
+            $stateId = (new \ReflectionClass(static::class))->getShortName();
+            $stateId = str_replace('Page', '', $stateId);
+            $stateId = lcfirst($stateId);
+
+            return $stateId . 'State';
+        }
+
         return static::$stateId;
     }
 }

@@ -10,6 +10,8 @@ class NavigationPath extends Path
 
     protected ?string $stackKey = null;
 
+    protected ?string $navigationType = null;
+
     protected ?int $index = null;
 
     protected ?array $queryParameters = null;
@@ -47,6 +49,13 @@ class NavigationPath extends Path
     public function setPathParameters($pathParameters)
     {
         $this->pathParameters = $pathParameters;
+
+        return $this;
+    }
+
+    public function setNavigationType($navigationType)
+    {
+        $this->navigationType = $navigationType;
 
         return $this;
     }

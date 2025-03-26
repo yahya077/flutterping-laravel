@@ -13,11 +13,11 @@ class GestureDetector extends Widget
         return ElementDefinitions::GestureDetector;
     }
 
-    protected BaseEvent $onTap;
+    protected ?BaseEvent $onTap;
 
     protected Widget|Json $child;
 
-    public function setOnTap(BaseEvent $onTap): GestureDetector
+    public function setOnTap(?BaseEvent $onTap): GestureDetector
     {
         $this->onTap = $onTap;
 

@@ -10,6 +10,7 @@ use Flutterping\Resources\Json;
 use Flutterping\Resources\Page\MaterialPage;
 use Flutterping\Resources\ReactiveWidgetState;
 use Flutterping\Resources\Scope;
+use Flutterping\Resources\Widgets\Placeholder;
 use Flutterping\Resources\Widgets\ReactiveWidget;
 use Flutterping\Resources\Widgets\Widget;
 
@@ -73,21 +74,29 @@ abstract class StatefulPage extends Page
         return new EventDispatchAction(static::getStateId(), 'StateEvent', $state);
     }
 
-    public static function getStateId(): string
+    public static function getInitialWidget(): Json|Widget|null
     {
-        return static::$stateId;
+        return null;
     }
 
     protected function widget(): Json
     {
+        $reactiveWidget = (new ReactiveWidget)
+            ->setParentStateId(static::getParentStateId())
+            ->setStateId(static::getStateId())
+            ->setPageNotifiers($this->getPageNotifiers())
+            ->setState((new ReactiveWidgetState)
+                ->setInitialStateName(static::getInitialStateName())
+                ->setStates($this->getStates()));
+
+        if (static::getInitialWidget() != null) {
+            $reactiveWidget->setInitialWidget(static::getInitialWidget());
+        } else {
+            $reactiveWidget->setInitialWidget((new Placeholder()));
+        }
+
         return (new MaterialPage)
             ->setFullscreenDialog(static::$fullscreenDialog)
-            ->setChild((new ReactiveWidget)
-                ->setParentStateId(static::getParentStateId())
-                ->setStateId(static::getStateId())
-                ->setPageNotifiers($this->getPageNotifiers())
-                ->setState((new ReactiveWidgetState)
-                    ->setInitialStateName(static::getInitialStateName())
-                    ->setStates($this->getStates())));
+            ->setChild($reactiveWidget);
     }
 }

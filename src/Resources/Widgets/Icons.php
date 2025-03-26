@@ -153,4 +153,49 @@ class Icons
     {
         return (new IconData(0xEFAB))->setFontFamily($fontFamily);
     }
+
+    public static function add($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe047))->setFontFamily($fontFamily);
+    }
+
+    public static function add_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe758))->setFontFamily($fontFamily);
+    }
+
+    public static function add_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf537))->setFontFamily($fontFamily);
+    }
+
+    public static function calendar_month($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf06bb))->setFontFamily($fontFamily);
+    }
+
+    public static function calendar_today($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe122))->setFontFamily($fontFamily);
+    }
+
+    public static function calendar_today_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xef11))->setFontFamily($fontFamily);
+    }
+
+    public static function cake($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe120))->setFontFamily($fontFamily);
+    }
+
+    public static function cake_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe81d))->setFontFamily($fontFamily);
+    }
+
+    public static function cake_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xef0f))->setFontFamily($fontFamily);
+    }
 }

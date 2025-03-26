@@ -15,6 +15,7 @@ class GoRoute extends Route
     public static function fromPage(Page $page): self
     {
         return (new self)
+            ->setRedirect($page::getRedirect())
             ->setPage($page)
             ->setName($page::getRouteName())
             ->setPath($page::getRoutePath())
