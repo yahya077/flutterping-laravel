@@ -13,6 +13,6 @@ class UrlLauncherAction extends Action
 
     public function getActionType(): string
     {
-        return "UrlLauncherAction";
+        return 'UrlLauncherAction';
     }
 }

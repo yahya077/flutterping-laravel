@@ -7,15 +7,12 @@ class AuthenticationException extends FlutterpingException
     /**
      * Create a new authentication exception instance.
      *
-     * @param  string  $message
-     * @param  int  $code
-     * @param  \Throwable|null  $previous
      * @return void
      */
     public function __construct(
         string $message = 'Authentication failed.',
         int $code = 0,
-        \Throwable $previous = null
+        ?\Throwable $previous = null
     ) {
         parent::__construct($message, 'authentication_error', $code, $previous);
     }
@@ -32,7 +29,7 @@ class AuthenticationException extends FlutterpingException
             'error' => [
                 'code' => $this->getErrorCode(),
                 'message' => $this->getMessage(),
-            ]
+            ],
         ], 401);
     }
-} 
+}

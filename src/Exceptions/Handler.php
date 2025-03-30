@@ -2,7 +2,6 @@
 
 namespace Flutterping\Exceptions;
 
-use Flutterping\Resources\Action\AlertAction;
 use Flutterping\Resources\Action\DialogAction;
 use Flutterping\Resources\Event\ActionEvent;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -35,8 +34,6 @@ class Handler extends ExceptionHandler
 
     /**
      * Register the exception handling callbacks for the application.
-     *
-     * @return void
      */
     public function register(): void
     {
@@ -46,7 +43,7 @@ class Handler extends ExceptionHandler
 
         $this->renderable(function (InvalidAppVersionException $e, Request $request) {
             if (str_contains($request->route()->getName(), 'flutterping')) {
-                return response()->flutterping((new ActionEvent())->setAction((new DialogAction())
+                return response()->flutterping((new ActionEvent)->setAction((new DialogAction)
                     ->setTitle(sprintf('Invalid App Version'))
                     ->setMessage($e->getMessage())), 400);
             }
@@ -54,7 +51,7 @@ class Handler extends ExceptionHandler
 
         $this->renderable(function (InactiveVersionException $e, Request $request) {
             if (str_contains($request->route()->getName(), 'flutterping')) {
-                return response()->flutterping((new ActionEvent())->setAction((new DialogAction())
+                return response()->flutterping((new ActionEvent)->setAction((new DialogAction)
                     ->setTitle('Inactive App Version')
                     ->setMessage($e->getMessage())), 400);
             }
@@ -62,7 +59,7 @@ class Handler extends ExceptionHandler
 
         $this->renderable(function (MissingHeaderException $e, Request $request) {
             if (str_contains($request->route()->getName(), 'flutterping')) {
-                return response()->flutterping((new ActionEvent())->setAction((new DialogAction())
+                return response()->flutterping((new ActionEvent)->setAction((new DialogAction)
                     ->setTitle('Missing Header')
                     ->setMessage($e->getMessage())), 400);
             }
@@ -70,7 +67,7 @@ class Handler extends ExceptionHandler
 
         $this->renderable(function (NetworkException $e, Request $request) {
             if (str_contains($request->route()->getName(), 'flutterping')) {
-                return response()->flutterping((new ActionEvent())->setAction((new DialogAction())
+                return response()->flutterping((new ActionEvent)->setAction((new DialogAction)
                     ->setTitle('Network Error')
                     ->setMessage($e->getMessage())), 400);
             }
@@ -86,10 +83,10 @@ class Handler extends ExceptionHandler
                             'message' => $e->getMessage(),
                             'context' => [
                                 'error_code' => $e->getErrorCode(),
-                                'error_type' => 'authentication'
-                            ]
-                        ]
-                    ]
+                                'error_type' => 'authentication',
+                            ],
+                        ],
+                    ],
                 ], 401);
             }
         });
@@ -104,10 +101,10 @@ class Handler extends ExceptionHandler
                             'message' => $e->getMessage(),
                             'context' => [
                                 'error_code' => $e->getErrorCode(),
-                                'error_type' => 'flutterping'
-                            ]
-                        ]
-                    ]
+                                'error_type' => 'flutterping',
+                            ],
+                        ],
+                    ],
                 ], 400);
             }
         });
@@ -123,10 +120,10 @@ class Handler extends ExceptionHandler
                             'message' => $e->getMessage() ?: 'Unauthenticated.',
                             'context' => [
                                 'error_code' => 'unauthenticated',
-                                'error_type' => 'laravel_auth'
-                            ]
-                        ]
-                    ]
+                                'error_type' => 'laravel_auth',
+                            ],
+                        ],
+                    ],
                 ], 401);
             }
         });
@@ -143,74 +140,74 @@ class Handler extends ExceptionHandler
                             'context' => [
                                 'error_code' => 'validation_error',
                                 'error_type' => 'validation',
-                                'errors' => $e->errors()
-                            ]
-                        ]
-                    ]
+                                'errors' => $e->errors(),
+                            ],
+                        ],
+                    ],
                 ], 422);
             }
         });
 
         // Handle all other exceptions (undefined/unexpected exceptions)
-        //TODO currently we dont have enough widget to handle this exception
-//        $this->renderable(function (Throwable $e, Request $request) {
-//            // Only handle requests to Flutterping routes
-//            if (str_contains($request->route()->getName(), 'flutterping')) {
-//                $statusCode = method_exists($e, 'getStatusCode') ? $e->getStatusCode() : 500;
-//                $message = config('app.env') === 'production'
-//                    ? 'An unexpected error occurred.'
-//                    : $e->getMessage();
-//
-//                $context = [
-//                    'error_code' => 'server_error',
-//                    'error_type' => 'server'
-//                ];
-//
-//                // Add detailed debug information only in non-production environments
-//                if (config('app.env') !== 'production' && config('app.debug')) {
-//                    $trace = collect($e->getTrace())->map(function ($trace) {
-//                        // Remove args from trace to avoid exposing sensitive data
-//                        return collect($trace)->filter(function ($value, $key) {
-//                            return $key !== 'args';
-//                        })->toArray();
-//                    })->toArray();
-//
-//                    $context['debug'] = [
-//                        'exception' => get_class($e),
-//                        'file' => $e->getFile(),
-//                        'line' => $e->getLine(),
-//                        'trace' => $trace,
-//                    ];
-//
-//                    // Add request information
-//                    $context['request'] = [
-//                        'url' => $request->fullUrl(),
-//                        'method' => $request->method(),
-//                        'headers' => collect($request->headers->all())
-//                            ->map(function ($item) {
-//                                return is_array($item) ? reset($item) : $item;
-//                            })
-//                            ->filter(function ($value, $key) {
-//                                // Filter out sensitive headers
-//                                return !in_array(strtolower($key), ['authorization', 'cookie']);
-//                            })
-//                            ->toArray(),
-//                    ];
-//                }
-//
-//                return response()->json([
-//                    'error_ui' => [
-//                        'type' => 'ping_error_view',
-//                        'data' => [
-//                            'error' => 'server_error',
-//                            'message' => $message,
-//                            'context' => $context
-//                        ]
-//                    ]
-//                ], $statusCode);
-//            }
-//
-//            return null;
-//        });
+        // TODO currently we dont have enough widget to handle this exception
+        //        $this->renderable(function (Throwable $e, Request $request) {
+        //            // Only handle requests to Flutterping routes
+        //            if (str_contains($request->route()->getName(), 'flutterping')) {
+        //                $statusCode = method_exists($e, 'getStatusCode') ? $e->getStatusCode() : 500;
+        //                $message = config('app.env') === 'production'
+        //                    ? 'An unexpected error occurred.'
+        //                    : $e->getMessage();
+        //
+        //                $context = [
+        //                    'error_code' => 'server_error',
+        //                    'error_type' => 'server'
+        //                ];
+        //
+        //                // Add detailed debug information only in non-production environments
+        //                if (config('app.env') !== 'production' && config('app.debug')) {
+        //                    $trace = collect($e->getTrace())->map(function ($trace) {
+        //                        // Remove args from trace to avoid exposing sensitive data
+        //                        return collect($trace)->filter(function ($value, $key) {
+        //                            return $key !== 'args';
+        //                        })->toArray();
+        //                    })->toArray();
+        //
+        //                    $context['debug'] = [
+        //                        'exception' => get_class($e),
+        //                        'file' => $e->getFile(),
+        //                        'line' => $e->getLine(),
+        //                        'trace' => $trace,
+        //                    ];
+        //
+        //                    // Add request information
+        //                    $context['request'] = [
+        //                        'url' => $request->fullUrl(),
+        //                        'method' => $request->method(),
+        //                        'headers' => collect($request->headers->all())
+        //                            ->map(function ($item) {
+        //                                return is_array($item) ? reset($item) : $item;
+        //                            })
+        //                            ->filter(function ($value, $key) {
+        //                                // Filter out sensitive headers
+        //                                return !in_array(strtolower($key), ['authorization', 'cookie']);
+        //                            })
+        //                            ->toArray(),
+        //                    ];
+        //                }
+        //
+        //                return response()->json([
+        //                    'error_ui' => [
+        //                        'type' => 'ping_error_view',
+        //                        'data' => [
+        //                            'error' => 'server_error',
+        //                            'message' => $message,
+        //                            'context' => $context
+        //                        ]
+        //                    ]
+        //                ], $statusCode);
+        //            }
+        //
+        //            return null;
+        //        });
     }
 }
