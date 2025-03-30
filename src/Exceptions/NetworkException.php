@@ -14,15 +14,12 @@ class NetworkException extends FlutterpingException
     /**
      * Create a new network exception instance.
      *
-     * @param  string  $message
-     * @param  int  $statusCode
-     * @param  \Throwable|null  $previous
      * @return void
      */
     public function __construct(
         string $message = 'A network error occurred.',
         int $statusCode = 500,
-        \Throwable $previous = null
+        ?\Throwable $previous = null
     ) {
         parent::__construct($message, 'network_error', $statusCode, $previous);
         $this->statusCode = $statusCode;
@@ -30,8 +27,6 @@ class NetworkException extends FlutterpingException
 
     /**
      * Get the HTTP status code for this exception.
-     *
-     * @return int
      */
     public function getStatusCode(): int
     {
@@ -51,7 +46,7 @@ class NetworkException extends FlutterpingException
                 'code' => $this->getErrorCode(),
                 'message' => $this->getMessage(),
                 'status_code' => $this->statusCode,
-            ]
+            ],
         ], $this->statusCode);
     }
-} 
+}

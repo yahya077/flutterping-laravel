@@ -8,6 +8,7 @@ use Flutterping\Resources\Widgets\Widget;
 class DialogAction extends Action
 {
     protected string $message;
+
     protected string $title;
 
     protected string $defaultActionText;

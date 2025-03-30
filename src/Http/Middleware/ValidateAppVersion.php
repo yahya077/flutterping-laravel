@@ -32,13 +32,13 @@ class ValidateAppVersion
 
         try {
             $flutterPingVersion = FlutterpingVersion::version(
-                (int) $versionSteps[0], 
-                (int) $versionSteps[1], 
+                (int) $versionSteps[0],
+                (int) $versionSteps[1],
                 (int) $versionSteps[2]
             )->firstOrFail();
 
             if (! $flutterPingVersion->active && config('app.env') !== 'local') {
-                throw new InactiveVersionException();
+                throw new InactiveVersionException;
             }
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new InvalidAppVersionException('App version not found in the database.');

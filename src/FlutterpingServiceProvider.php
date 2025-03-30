@@ -78,8 +78,6 @@ class FlutterpingServiceProvider extends PackageServiceProvider
 
     /**
      * Register the exception handler for Flutterping.
-     *
-     * @return void
      */
     protected function registerExceptionHandler(): void
     {
