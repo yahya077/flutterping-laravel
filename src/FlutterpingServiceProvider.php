@@ -54,7 +54,7 @@ class FlutterpingServiceProvider extends PackageServiceProvider
             return Response::json((new ActionEvent)->setStateId($stateId)->setAction((new AlertAction)->setContent((new Text($alertMessage)))->setColor($color))->toArray());
         });
 
-        Response::macro('flutterping', function (Renderable $renderable, int $status = 200, array $headers = [], array $options = []) {
+        Response::macro('flutterping', function (Renderable $renderable, int $status = 200, array $headers = [], int $options = 0) {
             return Response::json($renderable->render(), $status, $headers, $options);
         });
 

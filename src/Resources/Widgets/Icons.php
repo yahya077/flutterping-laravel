@@ -198,4 +198,74 @@ class Icons
     {
         return (new IconData(0xEF0F))->setFontFamily($fontFamily);
     }
+
+    public static function apple($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf04be))->setFontFamily($fontFamily);
+    }
+
+    public static function apple_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf03cb))->setFontFamily($fontFamily);
+    }
+
+    public static function apple_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf02d8))->setFontFamily($fontFamily);
+    }
+
+    public static function apple_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf05b9))->setFontFamily($fontFamily);
+    }
+
+    public static function android($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe085))->setFontFamily($fontFamily);
+    }
+
+    public static function android_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe784))->setFontFamily($fontFamily);
+    }
+
+    public static function android_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf563))->setFontFamily($fontFamily);
+    }
+
+    public static function android_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xee76))->setFontFamily($fontFamily);
+    }
+
+    public static function system_update($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe636))->setFontFamily($fontFamily);
+    }
+
+    public static function system_update_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xed2d))->setFontFamily($fontFamily);
+    }
+
+    public static function system_update_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf020c))->setFontFamily($fontFamily);
+    }
+
+    public static function system_update_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf41a))->setFontFamily($fontFamily);
+    }
+
+    public static function system_update_alt($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe637))->setFontFamily($fontFamily);
+    }
+
+    public static function system_update_alt_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xed2c))->setFontFamily($fontFamily);
+    }
 }
