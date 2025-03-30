@@ -9,7 +9,10 @@ use Flutterping\Resources\Renderable;
 class BottomNavigationBarThemeData extends Renderable
 {
     protected ColorInterface $backgroundColor;
+
     protected ColorInterface $selectedItemColor;
+
     protected ColorInterface $unselectedItemColor;
+
     protected CoreDouble $elevation;
 }

@@ -18,6 +18,7 @@ class MaterialAppRouter extends Widget
     protected bool $showPerformanceOverlay;
 
     protected bool $checkerboardOffscreenLayers;
+
     protected bool $checkerboardRasterCacheImages;
 
     protected Locale $locale;

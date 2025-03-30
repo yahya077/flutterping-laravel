@@ -80,7 +80,7 @@ abstract class Page extends Widget
             $stateId = str_replace('Page', '', $stateId);
             $stateId = lcfirst($stateId);
 
-            return $stateId . 'State';
+            return $stateId.'State';
         }
 
         return static::$stateId;

@@ -7,8 +7,11 @@ use Flutterping\Resources\RenderableProperty;
 class ShimmerDirection extends RenderableProperty
 {
     const ltr = 'ltr';
+
     const rtl = 'rtl';
+
     const ttb = 'ttb';
+
     const btt = 'btt';
 
     public static function ltr(): ShimmerDirection

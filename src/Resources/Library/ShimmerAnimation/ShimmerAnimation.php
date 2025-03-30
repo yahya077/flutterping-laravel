@@ -12,6 +12,7 @@ class ShimmerAnimation extends Widget
     protected Gradient $gradient;
 
     protected Json $child;
+
     protected ShimmerDirection $shimmerDirection;
 
     protected Duration $duration;
@@ -64,6 +65,6 @@ class ShimmerAnimation extends Widget
 
     public function getType(): string
     {
-        return "ShimmerAnimation";
+        return 'ShimmerAnimation';
     }
 }
