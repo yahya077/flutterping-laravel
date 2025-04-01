@@ -1,4 +1,6 @@
-# The Laravel adapter for Flutter Ping
+# Flutterping Laravel Package (Develop micro mobile apps in minutes)
+
+The Laravel adapter for Flutter Ping.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/yahya077/flutterping-laravel.svg?style=flat-square)](https://packagist.org/packages/yahya077/flutterping-laravel)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/yahya077/flutterping-laravel/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/yahya077/flutterping-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)

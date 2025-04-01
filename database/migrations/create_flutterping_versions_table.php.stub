@@ -13,6 +13,7 @@ return new class extends Migration
             $table->integer('major');
             $table->integer('minor');
             $table->integer('patch');
+            $table->integer('release_order');
             $table->string('release_type')->default('draft');
             $table->string('name')->nullable();
             $table->text('changes')->nullable();

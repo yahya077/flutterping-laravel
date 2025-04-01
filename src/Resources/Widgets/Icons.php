@@ -268,4 +268,9 @@ class Icons
     {
         return (new IconData(0xED2C))->setFontFamily($fontFamily);
     }
+
+    public static function refresh($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe514))->setFontFamily($fontFamily);
+    }
 }

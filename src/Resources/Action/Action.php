@@ -9,6 +9,7 @@ abstract class Action extends Json implements ActionInterface
     protected string $type;
 
     protected Action $thenAction;
+    protected Action $onFailAction;
 
     public function __construct()
     {
@@ -23,6 +24,13 @@ abstract class Action extends Json implements ActionInterface
     public function then(Action $thenAction): self
     {
         $this->thenAction = $thenAction;
+
+        return $this;
+    }
+
+    public function onFail(Action $onFailAction): self
+    {
+        $this->onFailAction = $onFailAction;
 
         return $this;
     }

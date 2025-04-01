@@ -32,6 +32,8 @@ class TextFormField extends Widget
     protected TextDirection $textDirection;
 
     protected bool $obscureText;
+    protected bool $enableSuggestions;
+    protected bool $autocorrect;
 
     protected bool $autofocus;
 
@@ -154,6 +156,20 @@ class TextFormField extends Widget
     public function setValidator(Validator $validator): self
     {
         $this->validator = $validator;
+
+        return $this;
+    }
+
+    public function setEnableSuggestions(bool $enableSuggestions): self
+    {
+        $this->enableSuggestions = $enableSuggestions;
+
+        return $this;
+    }
+
+    public function setAutocorrect(bool $autocorrect): self
+    {
+        $this->autocorrect = $autocorrect;
 
         return $this;
     }
