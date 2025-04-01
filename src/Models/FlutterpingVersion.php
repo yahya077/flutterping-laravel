@@ -76,6 +76,7 @@ class FlutterpingVersion extends Model
             if (! $flutterPingVersion->active && config('app.env') !== 'local') {
                 throw new InactiveVersionException;
             }
+
             return $flutterPingVersion;
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             throw new InvalidAppVersionException('App version not found in the database.');
@@ -102,4 +103,3 @@ class FlutterpingVersion extends Model
             ->first();
     }
 }
-

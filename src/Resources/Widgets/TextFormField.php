@@ -32,7 +32,9 @@ class TextFormField extends Widget
     protected TextDirection $textDirection;
 
     protected bool $obscureText;
+
     protected bool $enableSuggestions;
+
     protected bool $autocorrect;
 
     protected bool $autofocus;

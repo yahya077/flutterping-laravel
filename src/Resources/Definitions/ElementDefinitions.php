@@ -163,5 +163,6 @@ class ElementDefinitions
     const Overlay = 'Overlay';
 
     const PingErrorView = 'PingErrorView';
+
     const Center = 'Center';
 }
