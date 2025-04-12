@@ -5,8 +5,6 @@ namespace Flutterping\Resources\Widgets;
 use Flutterping\Resources\Core\CoreDouble;
 use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Json;
-use Flutterping\Resources\UI\Color;
-use Flutterping\Resources\UI\TextDirection;
 
 class Center extends Widget
 {

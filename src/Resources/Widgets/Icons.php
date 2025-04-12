@@ -271,6 +271,6 @@ class Icons
 
     public static function refresh($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe514))->setFontFamily($fontFamily);
+        return (new IconData(0xE514))->setFontFamily($fontFamily);
     }
 }

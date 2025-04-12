@@ -9,6 +9,7 @@ abstract class Action extends Json implements ActionInterface
     protected string $type;
 
     protected Action $thenAction;
+
     protected Action $onFailAction;
 
     public function __construct()
