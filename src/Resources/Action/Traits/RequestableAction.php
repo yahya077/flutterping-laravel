@@ -18,6 +18,8 @@ trait RequestableAction
 
     protected AbstractValue $body;
 
+    protected AbstractValue $queryParameters;
+
     public function setClient(string $client): self
     {
         $this->client = $client;
@@ -42,6 +44,13 @@ trait RequestableAction
     public function setBody(AbstractValue $body): self
     {
         $this->body = $body;
+
+        return $this;
+    }
+
+    public function setQueryParameters(AbstractValue $queryParameters): self
+    {
+        $this->queryParameters = $queryParameters;
 
         return $this;
     }
