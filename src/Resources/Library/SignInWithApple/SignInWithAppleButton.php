@@ -12,6 +12,7 @@ class SignInWithAppleButton extends Widget
     protected string $clientId;
 
     protected string $redirectUri;
+
     protected string $text;
 
     protected CoreDouble $height;
