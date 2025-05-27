@@ -20,7 +20,7 @@ class ScrollViewKeyboardDismissBehavior extends Json
 
     public function __construct($value)
     {
-        if (!in_array($value, self::values)) {
+        if (! in_array($value, self::values)) {
             throw new \InvalidArgumentException('Invalid value for ScrollViewKeyboardDismissBehavior');
         }
         $this->value = $value;

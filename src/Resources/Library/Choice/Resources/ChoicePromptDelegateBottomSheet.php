@@ -2,12 +2,11 @@
 
 namespace Flutterping\Resources\Library\Choice\Resources;
 
-use Flutterping\Resources\Json;
-use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoicePromptDelegateInterface;
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Core\CoreDouble;
+use Flutterping\Resources\Json;
+use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoicePromptDelegateInterface;
 use Flutterping\Resources\Paintings\ShapeBorder;
-use Flutterping\Resources\Renderable;
 use Flutterping\Resources\UI\Clip;
 
 class ChoicePromptDelegateBottomSheet extends Json implements ChoicePromptDelegateInterface

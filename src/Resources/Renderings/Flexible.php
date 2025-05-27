@@ -8,6 +8,7 @@ use Flutterping\Resources\Widgets\Widget;
 class Flexible extends Json
 {
     protected int $flex;
+
     protected FlexFit $fit;
 
     protected Json|Widget $child;

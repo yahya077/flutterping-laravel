@@ -2,11 +2,11 @@
 
 namespace App\Resources\Library\Choice\Resources;
 
-use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoicePromptDelegateInterface;
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Core\CoreDouble;
-use Flutterping\Resources\Paintings\ShapeBorder;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoicePromptDelegateInterface;
+use Flutterping\Resources\Paintings\ShapeBorder;
 use Flutterping\Resources\UI\Clip;
 
 class ChoicePromptDelegatePopupDialog extends Json implements ChoicePromptDelegateInterface

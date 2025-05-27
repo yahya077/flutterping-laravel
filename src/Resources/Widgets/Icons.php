@@ -276,22 +276,22 @@ class Icons
 
     public static function construction($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe189))->setFontFamily($fontFamily);
+        return (new IconData(0xE189))->setFontFamily($fontFamily);
     }
 
     public static function construction_sharp($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xe886))->setFontFamily($fontFamily);
+        return (new IconData(0xE886))->setFontFamily($fontFamily);
     }
 
     public static function construction_rounded($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xf665))->setFontFamily($fontFamily);
+        return (new IconData(0xF665))->setFontFamily($fontFamily);
     }
 
     public static function construction_outlined($fontFamily = 'MaterialIcons'): IconData
     {
-        return (new IconData(0xef78))->setFontFamily($fontFamily);
+        return (new IconData(0xEF78))->setFontFamily($fontFamily);
     }
 
     public static function arrow_back($fontFamily = 'MaterialIcons'): IconData
@@ -653,5 +653,4 @@ class Icons
     {
         return (new IconData(0xF065B))->setFontFamily($fontFamily);
     }
-
 }

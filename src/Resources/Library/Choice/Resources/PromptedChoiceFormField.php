@@ -2,10 +2,10 @@
 
 namespace Flutterping\Resources\Library\Choice\Resources;
 
-use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoiceAnchorInterface;
-use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoicePromptDelegateInterface;
 use Flutterping\Resources\Event\ActionEvent;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoiceAnchorInterface;
+use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoicePromptDelegateInterface;
 use Flutterping\Resources\Material\InputDecoration;
 use Flutterping\Resources\Validator\Validator;
 use Flutterping\Resources\Widgets\Widget;
@@ -13,6 +13,7 @@ use Flutterping\Resources\Widgets\Widget;
 class PromptedChoiceFormField extends Widget
 {
     protected string $title;
+
     protected string $name;
 
     protected mixed $initialValue;

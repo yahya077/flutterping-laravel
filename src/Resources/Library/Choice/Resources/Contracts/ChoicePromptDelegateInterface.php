@@ -2,6 +2,4 @@
 
 namespace Flutterping\Resources\Library\Choice\Resources\Contracts;
 
-interface ChoicePromptDelegateInterface
-{
-}
+interface ChoicePromptDelegateInterface {}

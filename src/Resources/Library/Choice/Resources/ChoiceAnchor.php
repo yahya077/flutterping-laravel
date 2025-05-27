@@ -2,8 +2,8 @@
 
 namespace Flutterping\Resources\Library\Choice\Resources;
 
-use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoiceAnchorInterface;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoiceAnchorInterface;
 
 class ChoiceAnchor extends Json implements ChoiceAnchorInterface
 {

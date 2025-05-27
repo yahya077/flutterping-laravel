@@ -7,6 +7,7 @@ use Flutterping\Resources\RenderableProperty;
 class FlexFit extends RenderableProperty
 {
     const tight = 'tight';
+
     const loose = 'loose';
 
     public static function tight(): FlexFit

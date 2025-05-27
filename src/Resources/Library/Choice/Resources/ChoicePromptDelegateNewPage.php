@@ -2,9 +2,9 @@
 
 namespace Flutterping\Resources\Library\Choice\Resources;
 
-use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoicePromptDelegateInterface;
 use Flutterping\Resources\Contracts\ColorInterface;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoicePromptDelegateInterface;
 
 class ChoicePromptDelegateNewPage extends Json implements ChoicePromptDelegateInterface
 {

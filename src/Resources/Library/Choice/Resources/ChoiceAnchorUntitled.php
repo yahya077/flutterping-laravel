@@ -2,12 +2,11 @@
 
 namespace Flutterping\Resources\Library\Choice\Resources;
 
-use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoiceAnchorInterface;
 use Flutterping\Resources\Json;
+use Flutterping\Resources\Library\Choice\Resources\Contracts\ChoiceAnchorInterface;
 
 class ChoiceAnchorUntitled extends Json implements ChoiceAnchorInterface
 {
-
     protected Json $leading;
 
     protected Json $trailing;
