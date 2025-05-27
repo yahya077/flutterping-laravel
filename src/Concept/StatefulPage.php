@@ -62,6 +62,13 @@ abstract class StatefulPage extends Page
             ->setAction(static::updateWidgetAction($widget));
     }
 
+    public static function getActionEvent(Action $action): ActionEvent
+    {
+        return (new ActionEvent)
+            ->setStateId(static::getStateId())
+            ->setAction($action);
+    }
+
     public static function getStateEvent(string $state, ?Scope $scope = null): ActionEvent
     {
         return (new ActionEvent)

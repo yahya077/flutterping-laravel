@@ -42,6 +42,10 @@ class ElementDefinitions
 
     const Axis = 'Axis';
 
+    const ScrollViewKeyboardDismissBehavior = 'ScrollViewKeyboardDismissBehavior';
+
+    const VerticalDirection = 'VerticalDirection';
+
     const BoxShadow = 'BoxShadow';
 
     const DecorationImage = 'DecorationImage';
@@ -56,7 +60,11 @@ class ElementDefinitions
 
     const CrossAxisAlignment = 'CrossAxisAlignment';
 
+    const WrapCrossAlignment = 'WrapCrossAlignment';
+
     const MainAxisAlignment = 'MainAxisAlignment';
+
+    const WrapAlignment = 'WrapAlignment';
 
     const Color = 'Color';
 

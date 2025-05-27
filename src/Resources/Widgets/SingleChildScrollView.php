@@ -6,6 +6,7 @@ use Flutterping\Resources\Definitions\ElementDefinitions;
 use Flutterping\Resources\Foundation\ScrollController;
 use Flutterping\Resources\Json;
 use Flutterping\Resources\Paintings\Axis;
+use Flutterping\Resources\Renderings\ScrollViewKeyboardDismissBehavior;
 
 class SingleChildScrollView extends Widget
 {
@@ -21,6 +22,8 @@ class SingleChildScrollView extends Widget
     protected Widget|Json $child;
 
     protected ScrollController $controller;
+
+    protected ScrollViewKeyboardDismissBehavior $keyboardDismissBehavior;
 
     public function setScrollDirection(Axis $scrollDirection): SingleChildScrollView
     {
@@ -46,6 +49,13 @@ class SingleChildScrollView extends Widget
     public function setController(ScrollController $controller): SingleChildScrollView
     {
         $this->controller = $controller;
+
+        return $this;
+    }
+
+    public function setKeyboardDismissBehavior(ScrollViewKeyboardDismissBehavior $keyboardDismissBehavior): SingleChildScrollView
+    {
+        $this->keyboardDismissBehavior = $keyboardDismissBehavior;
 
         return $this;
     }

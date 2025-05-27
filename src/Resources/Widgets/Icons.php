@@ -273,4 +273,385 @@ class Icons
     {
         return (new IconData(0xE514))->setFontFamily($fontFamily);
     }
+
+    public static function construction($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe189))->setFontFamily($fontFamily);
+    }
+
+    public static function construction_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xe886))->setFontFamily($fontFamily);
+    }
+
+    public static function construction_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xf665))->setFontFamily($fontFamily);
+    }
+
+    public static function construction_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xef78))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE092))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE793))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF572))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE85))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back_ios_new($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE094))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back_ios_new_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE791))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back_ios_new_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF570))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_back_ios_new_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE83))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_down($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE095))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_down_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE794))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_down_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF573))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_down_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE86))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_left($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF04C1))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_left_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF03CE))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_left_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF02DB))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_left_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF05BC))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_right($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF04C2))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_right_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF03CF))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_right_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF02DC))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_right_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF05BD))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_up($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE096))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_up_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE795))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_up_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF574))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_circle_up_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE87))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_downward($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE097))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_downward_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE796))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_downward_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF575))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_downward_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE88))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_down($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE098))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_down_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE798))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_down_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF577))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_down_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE8A))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_down_circle($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE099))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_down_circle_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE797))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_down_circle_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF576))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_down_circle_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE89))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_up($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE09A))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_up_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE799))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_up_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF578))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_drop_up_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE8B))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_forward($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE09B))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_forward_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE79B))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_forward_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF57A))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_forward_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE8D))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_left($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE09D))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_left_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE79C))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_left_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF57B))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_left_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE8E))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_outward($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF0852))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_outward_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF0834))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_outward_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF087D))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_outward_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF089B))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_right($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE09E))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_right_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE79E))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_right_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF57D))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_right_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE90))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_right_alt($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE09F))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_right_alt_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE79D))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_right_alt_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF57C))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_right_alt_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE8F))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_upward($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE0A0))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_upward_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE79F))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_upward_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF57E))->setFontFamily($fontFamily);
+    }
+
+    public static function arrow_upward_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEE91))->setFontFamily($fontFamily);
+    }
+
+    public static function savings($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xE553))->setFontFamily($fontFamily);
+    }
+
+    public static function savings_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xEC49))->setFontFamily($fontFamily);
+    }
+
+    public static function savings_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF0128))->setFontFamily($fontFamily);
+    }
+
+    public static function savings_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF336))->setFontFamily($fontFamily);
+    }
+
+    public static function scale($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF0564))->setFontFamily($fontFamily);
+    }
+
+    public static function scale_sharp($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF046D))->setFontFamily($fontFamily);
+    }
+
+    public static function scale_rounded($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF037A))->setFontFamily($fontFamily);
+    }
+
+    public static function scale_outlined($fontFamily = 'MaterialIcons'): IconData
+    {
+        return (new IconData(0xF065B))->setFontFamily($fontFamily);
+    }
+
 }
